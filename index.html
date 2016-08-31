@@ -1,1 +1,436 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Amedeo Setti</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- INDENT TYPE -->
+    <!--<style> p.indent{ padding-left: 1.8em } </style>-->
+
+    <!-- JS SCRIPT -->
+    <script src="actions.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!-- 
+     _   _             _             _   _             
+    | \ | | __ ___   _(_) __ _  __ _| |_(_) ___  _ __  
+    |  \| |/ _` \ \ / / |/ _` |/ _` | __| |/ _ \| '_ \ 
+    | |\  | (_| |\ V /| | (_| | (_| | |_| | (_) | | | |
+    |_| \_|\__,_| \_/ |_|\__, |\__,_|\__|_|\___/|_| |_|
+                         |___/                         
+    -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#Home">Home</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#About" class="page-scroll">About</a>
+                    </li>
+                    <li>
+                        <a href="#Resume" class="page-scroll">Resume</a>
+                    </li>
+                    <li>
+                        <a href="#MyLife" class="page-scroll">MyLife</a>
+                    </li>
+                    <li>
+                        <a href="#Contact" class="page-scroll">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!--
+      _   _                      
+     | | | | ___  _ __ ___   ___ 
+     | |_| |/ _ \| '_ ` _ \ / _ \
+     |  _  | (_) | | | | | |  __/
+     |_| |_|\___/|_| |_| |_|\___|
+                            
+    -->
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="Home">I am Amedeo Setti.</h1>
+                <hr class="light">
+                <p>I am definitely not one of the best out there.</p>
+                <p>But I can do a lot of things.</p>
+                <p>Some of them very well.</p>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!--
+          _    _                 _   
+         / \  | |__   ___  _   _| |_ 
+        / _ \ | '_ \ / _ \| | | | __|
+       / ___ \| |_) | (_) | |_| | |_ 
+      /_/   \_\_.__/ \___/ \__,_|\__|
+                               
+    -->
+
+    <section class="bg-about" id="About">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Who is Amedeo?</h2>
+                    <hr class="light">
+                    <p>I'm 26 years old Mechatronic engineer from Trento, Italy.</p><p>&nbsp;</p>
+                    <p>I'm in love with software developing.</p><p>&nbsp;</p>
+                    <p>I also do other awesome things.</p><p>&nbsp;</p>
+                    <p>I always try to learn new awesome things.</p><p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--
+      ____                                
+     |  _ \ ___  ___ _   _ _ __ ___   ___ 
+     | |_) / _ \/ __| | | | '_ ` _ \ / _ \
+     |  _ <  __/\__ \ |_| | | | | | |  __/
+     |_| \_\___||___/\__,_|_| |_| |_|\___|
+                                          
+    -->
+
+    <section class="bg-resume" id="Resume">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Long Story Short</h2>
+                    <hr class="light">
+
+                    <!-- EDU -->
+                    <p class="text-faded">
+                        <h4 class="section-heading">Education</h4>
+                        MSc degree in Mechatronics engineering, University of Trento 2012-2014<br/>
+                        BSc degree in Industrial engineering, University of Trento 2009-2012
+                    </p>
+                    <p>&nbsp;</p>
+                    
+                    <!-- JOBS -->
+                    <p class="text-faded">
+                        <h4 class="section-heading">Employement</h4>
+                        Lead software developer of the <a href="http://www.artool.biz">ARTool</a> project, 2014-Current.
+                    </p>
+                    <p>&nbsp;</p>
+
+                    <!-- TECHS -->
+                    <p class="text-faded">
+                        <h4 class="section-heading">Techs</h4>
+                        Decent level: Swift, Objective-C, Apple's Frameworks, C++, C, Ruby, OpenCV, Matlab</br>
+                        Base level: HTML, CSS, JS, Python, Maple</br>
+                        In progress: Haskell</br>
+                        Others sw: Inventor, SolidWorks, Gimp and more...</br>
+                        Others: Arduino, Raspberry, base electronic capabilities
+                    </p>
+                    <p>&nbsp;</p>
+
+                    <!-- WHY ME? -->
+                    <p class="text-faded">
+                        <h4 class="section-heading">Why me?</h4>
+                        Because I can solve a lot of different problems without stress out the boss.</br>
+                        Because I'm italian, so I can cook some good italian's stuff for you.
+                    </p>
+                    <p>&nbsp;</p>
+
+                    <!--<a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get PDF Resume</a>-->
+                    
+                    <button type="button" class="btn btn-info btn-lg">
+                        <a href="cv/amedeosetticv.txt"><font color="white">Download complete CV</font></a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--
+      __  __       _     _  __      
+     |  \/  |_   _| |   (_)/ _| ___ 
+     | |\/| | | | | |   | | |_ / _ \
+     | |  | | |_| | |___| |  _|  __/
+     |_|  |_|\__, |_____|_|_|  \___|
+             |___/              
+    -->
+
+    <div id="MyLife" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#mycarousel" data-slide-to="1"></li>
+        <li data-target="#mycarousel" data-slide-to="2"></li>
+        <li data-target="#mycarousel" data-slide-to="3"></li>
+        <li data-target="#mycarousel" data-slide-to="4"></li>
+      </ol>
+    
+      <!-- Wrapper for slides -->
+      $item.eq(0).addClass('active');
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="images/frizionebw.JPG" data-color="lightblue" alt="My CBR600RR clutch">
+          <div class="carousel-caption">
+            <h3>My CBR600RR clutch</h3>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/cimatosafade.JPG" data-color="firebrick" alt="Peak Tosa, Brenta group">
+          <div class="carousel-caption">
+            <h3>Peak Tosa, Brenta group</h3>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/holland.jpg" data-color="violet" alt="Trento-Eindhoven... 14 hours">
+          <div class="carousel-caption">
+            <h3>Trento-Eindhoven... 14 hours</h3>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/thumb_DSC_1685_1024.jpg" data-color="lightgreen" alt="Where I live">
+          <div class="carousel-caption">
+            <h3>Where I live</h3>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/kayak1.jpg" data-color="tomato" alt="My owm made wood-fiberglass kayak">
+          <div class="carousel-caption">
+            <h3>My owm made wood-fiberglass kayak</h3>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Controls -->
+      <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+
+
+    <!--
+      ____            _             _   
+     / ___|___  _ __ | |_ __ _  ___| |_ 
+    | |   / _ \| '_ \| __/ _` |/ __| __|
+    | |__| (_) | | | | || (_| | (__| |_ 
+     \____\___/|_| |_|\__\__,_|\___|\__|
+                                    
+    -->
+    <section id="Contact">
+        <div class="bg-contact">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center ">
+                    <h2 class="section-heading">Where you can find me?</h2>
+                    <hr class="light">
+                    <p>
+                        You can find me on GitHub and StackOveflow, I also have an BitBucket account but is secret...</br>
+                        The most safe way to contact me is to send a mail at my Gmail account. 
+                    </p>
+                </div>
+
+                <div class="col-lg-4 text-center">
+                    <button type="button" class="btn btn-info btn-lg">
+                        <a href="https://github.com/adda25"><font color="white">GitHub</font></a>
+                    </button>
+                </div>
+
+                <div class="col-lg-4 text-center">
+                    <button type="button" class="btn btn-info btn-lg">
+                        <a href="mailto:notactiveyet@mail.com"><font color="white">Mail</font></a>
+                    </button>
+                </div>
+
+                <div class="col-lg-4 text-center">
+                    <button type="button" class="btn btn-info btn-lg">
+                        <a href="http://stackoverflow.com/users/5148377/adda-25?tab=profile"><font color="white">Stackoveflow</font></a>
+                    </button>
+                </div>
+
+                <div class="col-lg-8 col-lg-offset-2 text-center ">
+                    <h2 class="section-heading">Send me a message!</h2>
+                    <p>But I would be happy if you will contact me via this form!</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+     <footer>
+         <div class="row">
+             <div class="col-lg-12 text-center">
+                 <p>Copyright &copy; Amedeo Setti 2016, developed by Amedeo Setti. Source code is on my GitHub</p>
+             </div>
+         </div>
+     </footer>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $( document ).ready(function() {
+
+            $('.carousel').carousel({
+                interval: 4000,
+                pause: "false"
+            });
+
+            var $item = $('.carousel .item');
+            var $wHeight = $(window).height();
+            $item.height($wHeight); 
+            $item.addClass('full-screen');
+            $('.carousel img').each(function() {
+                var $src = $(this).attr('src');
+                var $color = $(this).attr('data-color');
+                $(this).parent().css({
+                    'background-image' : 'url(' + $src + ')',
+                    'background-color' : $color
+                });
+                $(this).remove();
+            });
+            
+            $(window).on('resize', function (){
+                $wHeight = $(window).height();
+                $item.height($wHeight);
+            });
+    });
+    </script>
+
+
+  </body>
+</html>
+
+
+
+
+
+<!--
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Some pics from my life</h2>
+                    <hr class="light">
+                    <p class="text-faded">
+                        When I'm not programming I like to do different sports, like climbing, running and cycling.
+                        In addition to computers, I love two other things: Motorbikes and Mountains. And girls.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="hovereffect" href="images/pchalftone.JPG">
+                    <img class="img-responsive" src="images/coding.jpg" alt="">
+                    <div class="overlay">
+                        <h2>Work</h2>                      
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="hovereffect" href="images/frizionebw.JPG">
+                    <img class="img-responsive" src="images/frizionebw.JPG" alt="">
+                    <div class="overlay">
+                        <h2>Replacing clutch </h2>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="hovereffect" href="images/pchalftone.JPG">
+                    <img class="img-responsive" src="images/coding.jpg" alt="">
+                    <div class="overlay">
+                        <h2>Work</h2>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="hovereffect" href="images/tramonto.jpg">
+                    <img class="img-responsive" src="images/tramonto.jpg" alt="">
+                    <div class="overlay">
+                        <h2>Garda lake sunset</h2>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="hovereffect" href="images/pchalftone.JPG">
+                    <img class="img-responsive" src="images/coding.jpg" alt="">
+                    <div class="overlay">
+                        <h2>Work</h2>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="hovereffect" href="images/cimatosafade.JPG">
+                    <img class="img-responsive" src="images/cimatosafade.JPG" alt="">
+                    <div class="overlay">
+                        <h2>Peak Tosa, Brenta group</h2>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="hovereffect" href="images/pchalftone.JPG">
+                    <img class="img-responsive" src="images/coding.jpg" alt="">
+                    <div class="overlay">
+                        <h2>Work</h2>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="hovereffect" href="images/eindhoven.jpg">
+                    <img class="img-responsive" src="images/eindhoven.jpg" alt="">
+                    <div class="overlay">
+                        <h2>Eindhoven, NL</h2>
+                    </div>
+                </a>
+            </div>
+-->
