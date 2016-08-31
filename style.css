@@ -7,7 +7,7 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('images/DSC_0458F.JPG');
+  background-image: url('images/DSC_0458F.png');
   text-align: center;
   color: white;
 }
@@ -47,7 +47,7 @@ header .header-content .header-content-inner p {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('images/DSC_0294F.JPG');
+  background-image: url('images/DSC_0294F.png');
   text-align: center;
   color: rgba(255, 255, 255, 0.85);
   padding: 10vh 2vh 10vh;
@@ -201,7 +201,7 @@ header .header-content .header-content-inner p {
 h3 {
   display: inline-block;
   padding: 10px;
-  background: #B9121B;
+  background: #66d9ff;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
