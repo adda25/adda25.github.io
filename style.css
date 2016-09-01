@@ -1,21 +1,89 @@
+/* FILE Currently inlined in index.html */
 .bg-home {
-  background-image: url('images/DSC_0458F2.png'); 
+  font-size: auto;
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 10vh 2vh 10vh;
+  color: rgba(255, 255, 255, 0.85);
+  background-image: url('images/DSC_0458F2.png');
+  
+  
 }
 
 .bg-about {
+  font-size: auto;
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
   background-image: url('images/DSC_0294F.png');
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 10vh 2vh 10vh;
 }
 
 .bg-resume {
+  font-size: auto;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
   background-image: url('images/codingfade.jpg');
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 10vh 2vh 10vh;
+  font-weight: bold;
 }
 
 .bg-mylife {
+  font-size: auto;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
   background-image: url('images/DSC_0404.JPG');
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 10vh 2vh 10vh;
+  font-weight: bold;
 }
 
 .bg-contact {
+  font-size: auto;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
   background-image: url('images/contactchrome.jpg');
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 10vh 2vh 10vh;
+  font-weight: bold;
 }
 
 
