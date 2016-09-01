@@ -31,6 +31,58 @@
     <link rel="stylesheet" href="slide.css"/>
     <link rel="stylesheet" href="scroll.css"/>
 
+    <style>
+
+        .bg-common {
+            font-size: auto;
+            font-weight: bold;
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 10vh 2vh 10vh;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        h3 {
+            display: inline-block;
+            padding: 10px;
+            background: #66d9ff;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .p {
+          text-align: center;
+          padding-top: 40px;
+          font-size: 13px;
+        }
+
+        .full-screen {
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        @media(min-width:767px) {
+            .navbar {
+                -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+                -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+                transition: background .5s ease-in-out,padding .5s ease-in-out;
+            }
+        
+            .top-nav-collapse {
+                padding: 0;
+            }
+        }
+
+    </style>
+
     <!-- reCAPTCHA -->
     <!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
   </head>
@@ -87,7 +139,7 @@
                             
     -->
 
-    <section class="bg-home" id="Home">
+    <section class="bg-common bg-home" id="Home">
         <div class="container-fluid">
             <div class="row">
                 <h1>I am Amedeo Setti.</h1>
@@ -111,7 +163,7 @@
                                
     -->
 
-    <section class="bg-about" id="About">
+    <section class="bg-common bg-about" id="About">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -138,7 +190,7 @@
                                           
     -->
 
-    <section class="bg-resume" id="Resume">
+    <section class="bg-common bg-resume" id="Resume">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -266,7 +318,7 @@
                                     
     -->
     <section id="Contact">
-        <div class="bg-contact">
+        <div class="bg-common bg-contact">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center ">
                     <h2 class="section-heading">Where you can find me?</h2>

@@ -1,124 +1,21 @@
-header {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
-  background-image: url('images/DSC_0458F.png');
-  text-align: center;
-  color: white;
-}
-header .header-content {
-  position: relative;
-  text-align: center;
-  padding: 100px 50px 100px 50px;
-  width: 100%;
-  min-height: 100vh;
-}
-header .header-content .header-content-inner h1 {
-  font-weight: bold;
-  text-transform: ;
-  color: rgba(255, 255, 255, 0.85);
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 70px;
-}
-header .header-content .header-content-inner hr {
-  margin: 30px auto;
-}
-header .header-content .header-content-inner p {
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 16px;
-  margin-bottom: 50px;
-}
-
 .bg-home {
-  font-size: auto;
-  font-weight: bold;
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
-  background-image: url('images/DSC_0458F2.png');
-  text-align: center;
-  color: rgba(255, 255, 255, 0.85);
-  padding: 10vh 2vh 10vh;
+  background-image: url('images/DSC_0458F2.png'); 
 }
 
 .bg-about {
-  font-size: auto;
-  font-weight: bold;
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
   background-image: url('images/DSC_0294F.png');
-  text-align: center;
-  color: rgba(255, 255, 255, 0.85);
-  padding: 10vh 2vh 10vh;
 }
 
 .bg-resume {
-  font-size: auto;
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
   background-image: url('images/codingfade.jpg');
-  text-align: center;
-  color: rgba(255, 255, 255, 0.85);
-  padding: 10vh 2vh 10vh;
-  font-weight: bold;
 }
 
 .bg-mylife {
-  font-size: auto;
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
   background-image: url('images/DSC_0404.JPG');
-  text-align: center;
-  color: rgba(255, 255, 255, 0.85);
-  padding: 10vh 2vh 10vh;
-  font-weight: bold;
 }
 
 .bg-contact {
-  font-size: auto;
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
   background-image: url('images/contactchrome.jpg');
-  text-align: center;
-  color: rgba(255, 255, 255, 0.85);
-  padding: 10vh 2vh 10vh;
-  font-weight: bold;
 }
 
 
