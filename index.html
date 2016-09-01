@@ -18,46 +18,18 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- INDENT TYPE -->
-    <!--<style> p.indent{ padding-left: 1.8em } </style>-->
-
-    <!-- JS SCRIPT -->
-    <!--<script src="actions.js"></script>-->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
-
-    <!-- CSS -->
-    
-
+    <!-- INLINE CSS [PERFORMANCE REASONS] -->
     <style>
         .bg-home {
             background-image: url('images/DSC_0458F2.jpg'); 
         }
-
-        .bg-about {
-            background-image: url('images/DSC_0294F.jpg');
-        }
         
-        .bg-resume {
-            background-image: url('images/codingfade2.jpg');
-        }
-        
-        .bg-contact {
-            background-image: url('images/contactchrome.jpg');
-        }
-    
-        form { 
-            margin: 0 auto; 
-            width:50vh;
-        }
-
         .bg-common {
             font-size: auto;
             font-weight: bold;
             position: relative;
             width: 100%;
-            max-width: 100vw;
             min-height: 100vh;
-            max-height: 120vh;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             background-size: cover;
@@ -77,15 +49,15 @@
         }
 
         .p {
-          text-align: center;
-          padding-top: 40px;
-          font-size: auto;
+            text-align: center;
+            padding-top: 40px;
+            font-size: auto;
         }
 
         .full-screen {
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         @media(min-width:767px) {
@@ -181,7 +153,13 @@
                                
     -->
 
+    <style>
+        .bg-about {
+            background-image: url('images/DSC_0294F.jpg');
+        }
+    </style>
     <section class="bg-common bg-about" id="About">
+        
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -208,6 +186,11 @@
                                           
     -->
 
+    <style>
+        .bg-resume {
+            background-image: url('images/codingfade2.jpg');
+        }
+    </style>
     <section class="bg-common bg-resume" id="Resume">
         <div class="container-fluid">
             <div class="row">
@@ -335,6 +318,17 @@
      \____\___/|_| |_|\__\__,_|\___|\__|
                                     
     -->
+
+    <style>
+        .bg-contact {
+            background-image: url('images/contactchrome.jpg');
+        }
+    
+        form { 
+            margin: 0 auto; 
+            width:50vh;
+        }
+    </style>
     <section id="Contact">
         <div class="bg-common bg-contact">
             <div class="row">
