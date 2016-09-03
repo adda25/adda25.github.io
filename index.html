@@ -18,10 +18,24 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed" rel="stylesheet"> <!-- Cambay -->
+
     <!-- INLINE CSS [PERFORMANCE REASONS] -->
     <style>
+        
+        /*
+        .navbar-inverse {
+            background-color: rgba(86, 192, 224, 0.9);
+            border-color: rgba(255, 255, 0, 0.9);
+            border-width: 0px;
+        }*/
+
+        body {
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+
         .bg-home {
-            background-image: url('images/DSC_0458F2.jpg'); 
+            background-image: url('images/DSC_0435.JPG'); 
         }
 
         .bg-about {
@@ -29,7 +43,7 @@
         }
 
         .bg-resume {
-            background-image: url('images/codingfade2.jpg');
+            background-image: url('images/codingfade4.jpg');
         }
 
         .bg-contact {
@@ -38,7 +52,7 @@
     
         .bg-common {
             font-size: auto;
-            font-weight: bold;
+            /*font-weight: bold;*/
             position: relative;
             width: 100%;
             min-height: 100vh;
@@ -49,7 +63,13 @@
             background-position: center;
             text-align: center;
             padding: 10vh 2vh 10vh;
-            color: rgba(255, 255, 255, 0.85);
+            color: rgba(255, 255, 255, 1.0);
+            text-shadow: 0px 1px rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            font-size: 70px;
+            font-weight: bold;
         }
 
         h3 {
@@ -60,10 +80,10 @@
             border-top-right-radius: 10px;
         }
 
-        .p {
+        p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
             text-align: center;
-            padding-top: 40px;
-            font-size: auto;
         }
 
         .full-screen {
@@ -149,11 +169,13 @@
     <section class="bg-common bg-home" id="Home">
         <div class="container-fluid">
             <div class="row">
-                <h1>I am Amedeo Setti.</h1>
+                <h1>I'm Amedeo Setti</h1>
                 <hr class="light">
-                <p>I am definitely not one of the best out there.</p></br>
-                <p>But I can do a lot of things.</p></br>
-                <p>Some of them very well.</p></br>
+                <p class="text-faded">
+                    <p>I am definitely not one of the best out there.</p></br>
+                    <p>But I can do a lot of things.</p></br>
+                    <p>Some of them very well.</p></br>
+                </p>
             </div>
             <a class="btn btn-info btn-lg page-scroll" href="#About">Read more</a>
         </div>
@@ -175,13 +197,15 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Who is Amedeo?</h2>
+                    <h1>Who is Amedeo?</h1>
                     <hr class="light">
-                    <p>I'm 26 years old Mechatronic engineer from Trento, Italy.</p><p>&nbsp;</p>
-                    <p>I'm in love with software developing.</p><p>&nbsp;</p>
-                    <p>I also do other awesome things.</p><p>&nbsp;</p>
-                    <p>I always try to learn new awesome things.</p><p>&nbsp;</p>
-                    <p>I'm pragmatic.</p><p>&nbsp;</p>
+                    <p class="text-faded">
+                        <p>I'm 26 years old Mechatronic engineer from Trento, Italy.</p><p>&nbsp;</p>
+                        <p>I'm in love with software developing.</p><p>&nbsp;</p>
+                        <p>I also do other awesome things.</p><p>&nbsp;</p>
+                        <p>I always try to learn new awesome things.</p><p>&nbsp;</p>
+                        <p>I'm pragmatic.</p><p>&nbsp;</p>
+                    </p>
                 </div>
             </div>
             <a class="btn btn-info btn-lg page-scroll" href="#Resume">Go ahead</a>
@@ -202,46 +226,53 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Long Story Short</h2>
+                    <h1>Long Story Short</h1>
                     <hr class="light">
 
                     <!-- EDU -->
                     <p class="text-faded">
-                        <h4 class="section-heading">Education</h4>
+                        <h2 class="section-heading">Education</h2>
+                        <p>
                         MSc degree in <i>Mechatronics engineering</i>, University of Trento 2012-2014<br/>
                         BSc degree in <i>Industrial engineering</i>, University of Trento 2009-2012
+                        </p>
                     </p>
                     <p>&nbsp;</p>
                     
                     <!-- JOBS -->
                     <p class="text-faded">
-                        <h4 class="section-heading">Employement</h4>
+                        <h2 class="section-heading">Employement</h2>
+                        <p>
                         Lead <i>software developer</i> of the <a href="http://www.artool.biz">ARTool</a> project, 2014-Current.
+                        </p>
                     </p>
                     <p>&nbsp;</p>
 
                     <!-- TECHS -->
                     <p class="text-faded">
-                        <h4 class="section-heading">Techs</h4>
+                        <h2 class="section-heading">Techs</h2>
+                        <p>
                         Decent level: <i>Swift, Objective-C, Apple's Frameworks, C++, C, Ruby, OpenCV, Matlab</i></br>
-                        Base level: <i>HTML, CSS, JS, Python, Maple</i></br>
-                        In progress: <i>Haskell</i></br>
+                        Base level: <i>HTML, CSS, JS, Python, Maple</i></br></br>
                         Others S: <i>Inventor, SolidWorks, Gimp and more...</i></br>
                         Others: <i>Arduino, Raspberry, base electronic capabilities</i>
+                        </p>
                     </p>
                     <p>&nbsp;</p>
 
                     <!-- WHY ME? -->
                     <p class="text-faded">
-                        <h4 class="section-heading">Why me?</h4>
+                        <h2 class="section-heading">Why me?</h2>
+                        <p>
                         Because I can <i>solve</i> a lot of different problems without stress out the boss.</br>
                         Because I'm italian, so I can <i>cook</i> some good italian's stuff for you.
+                        </p>
                     </p>
                     <p>&nbsp;</p>
                     
                     <div class="row">
                         <button type="button" class="btn btn-info btn-lg">
-                            <a href="cv/amedeosetticv.txt"><font color="white">Download complete CV</font></a>
+                            <a href="cv/amedeosetticv.pdf"><font color="white">Download complete CV</font></a>
                         </button>
                         <a class="btn btn-info btn-lg page-scroll" href="#MyLife">Go to my funny pictures</a>
                     </div>
@@ -330,7 +361,7 @@
         <div class="bg-common bg-contact">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center ">
-                    <h2 class="section-heading">Where you can find me?</h2>
+                    <h1>Where you can find me?</h1>
                     <hr class="light">
                     <p>You can find me on GitHub and StackOveflow, I also have an BitBucket account but is secret...</br></p>
                 </div>
@@ -355,7 +386,7 @@
 
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     </br><h2 class="section-heading">Send me a message!</h2>
-                    <p>But I would be happy if you will contact me via this form!</p>
+                    <p>I would be happy if you will contact me via this form!</p>
                 </div>
             </div>
             <form class="form-horizontal" role="form" method="post" action="error.html">
@@ -396,7 +427,7 @@
      <footer>
          <div class="row">
              <div class="col-lg-12 text-center">
-                 <p>Copyright &copy; Amedeo Setti 2016, developed by Amedeo Setti. Source code is on my <a href="https://github.com/adda25/adda25.github.io"><font color="blue">GitHub</font></a></p>
+                 Copyright &copy; Amedeo Setti 2016, developed by Amedeo Setti. Source code is on my <a href="https://github.com/adda25/adda25.github.io"><font color="blue">GitHub</font></a>
              </div>
          </div>
      </footer>
