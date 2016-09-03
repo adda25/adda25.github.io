@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Amedeo Setti</title>
 
@@ -22,28 +22,52 @@
 
     <!-- INLINE CSS [PERFORMANCE REASONS] -->
     <style>
+        .MTBox {
+            -moz-border-radius:0px;
+            -webkit-border-radius:00px;
+            border-radius:5px;
+            border: #solid 10px #000;
+            background-color: rgba(255,255,255,0.05);
+            min-width:70vw;
+            min-height:70vh;
+            margin-left: auto;
+            margin-right: auto;
+        }
         
-        /*
         .navbar-inverse {
-            background-color: rgba(86, 192, 224, 0.9);
-            border-color: rgba(255, 255, 0, 0.9);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.1);
             border-width: 0px;
-        }*/
+            width: 100%;
+
+        }
+        
+        .button {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
 
         body {
             font-family: 'Open Sans Condensed', sans-serif;
+            overflow-x: hidden;
         }
 
         .bg-home {
-            background-image: url('images/DSC_0458F5.jpg'); 
+            background-image: url('images/DSC_0458F.jpg'); 
         }
 
         .bg-about {
-            background-image: url('images/DSC_0294F.jpg');
+            background-image: url('images/DSC_0294.jpg');
         }
 
         .bg-resume {
-            background-image: url('images/codingfade4.jpg');
+            background-image: url('images/DSC_1688.jpg');
         }
 
         .bg-contact {
@@ -52,7 +76,7 @@
     
         .bg-common {
             font-size: auto;
-            /*font-weight: bold;*/
+            font-weight: bold;
             position: relative;
             width: 100%;
             min-height: 100vh;
@@ -68,21 +92,18 @@
         }
 
         h1 {
-            font-size: 70px;
+            font-size: 80px;
             font-weight: bold;
         }
 
-        h3 {
-            display: inline-block;
-            padding: 10px;
-            background: #66d9ff;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+        h2 {
+            font-size: 50px;
+            font-weight: bold;
         }
 
         p {
             font-size: 16px;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.8);
             text-align: center;
         }
 
@@ -94,10 +115,10 @@
 
         form { 
             margin: 0 auto; 
-            width:50vh;
+            width:40vh;
         }
 
-        @media(min-width:767px) {
+        @media(min-width:100px) {
             .navbar {
                 -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
                 -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -108,12 +129,18 @@
                 padding: 0;
             }
         }
+        /* FOR DEBUG SIZES
+        * { 
+            background: #000 !important;
+            color: #0f0 !important;
+            outline: solid #f00 1px !important;
+        }*/
     </style>
 
     <!-- reCAPTCHA -->
     <!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
   </head>
-  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <body data-spy="scroll" data-target=".navbar-inverse" data-offset="50">
     <!-- 
      _   _             _             _   _             
     | \ | | __ ___   _(_) __ _  __ _| |_(_) ___  _ __  
@@ -134,7 +161,6 @@
                 </button>
                 <a class="navbar-brand scroll page-scroll" href="#Home">Home</a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
@@ -165,19 +191,54 @@
      |_| |_|\___/|_| |_| |_|\___|
                             
     -->
+    <!--
+    <style type="text/css">
+        #content {
+            width: 100%;
+            height: 100%;
+            display: relative;
+        }
+
+        #left {
+            display: relative;
+            width: 50%;
+            height: 50%;
+        }
+
+        #right {
+            display: inline-block;
+            vertical-align: bottom;
+            horizontal-align: right;
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+    -->
 
     <section class="bg-common bg-home" id="Home">
         <div class="container-fluid">
-            <div class="row">
-                <h1>I'm Amedeo Setti</h1>
+            <div class="MTBox">
+                <h1>I am Amedeo Setti</h1>
                 <hr class="light">
                 <p class="text-faded">
                     <p>I am definitely not one of the best out there.</p></br>
                     <p>But I can do a lot of things.</p></br>
                     <p>Some of them very well.</p></br>
                 </p>
+                <!--
+                <div id="content">
+                    <div id="left">
+                       <h1>I am Amedeo Setti</h1>
+                    </div>
+                    <div id="right"> 
+                        <p>I am definitely not one of the best out there.</p></br>
+                        <p>But I can do a lot of things.</p></br>
+                        <p>Some of them very well.</p></br>
+                    </div>
+                </div>
+                -->
             </div>
-            <a class="btn btn-info btn-lg page-scroll" href="#About">Read more</a>
+            <a class="button page-scroll" href="#About">Read more</a>
         </div>
     </section>
 
@@ -193,22 +254,19 @@
     -->
 
     <section class="bg-common bg-about" id="About">
-        
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h1>Who is Amedeo?</h1>
-                    <hr class="light">
-                    <p class="text-faded">
-                        <p>I'm 26 years old Mechatronic engineer from Trento, Italy.</p><p>&nbsp;</p>
-                        <p>I'm in love with software developing.</p><p>&nbsp;</p>
-                        <p>I also do other awesome things.</p><p>&nbsp;</p>
-                        <p>I always try to learn new awesome things.</p><p>&nbsp;</p>
-                        <p>I'm pragmatic.</p><p>&nbsp;</p>
-                    </p>
-                </div>
+            <div class="MTBox">
+                <h2>Who is Amedeo?</h2>
+                <hr class="light">
+                <p class="text-faded">
+                    <p>I'm 26 years old Mechatronic engineer from Trento, Italy.</p></br>
+                    <p>I'm in love with software developing.</p></br>
+                    <p>I also do other awesome things.</p></br>
+                    <p>I always try to learn new awesome things.</p></br>
+                    <p>I'm pragmatic.</p></br>
+                </p>
             </div>
-            <a class="btn btn-info btn-lg page-scroll" href="#Resume">Go ahead</a>
+            <a class="button page-scroll" href="#Resume">Go ahead</a>
         </div>
     </section>
 
@@ -224,59 +282,48 @@
 
     <section class="bg-common bg-resume" id="Resume">
         <div class="container-fluid">
+            <div class="MTBox">
+                <h2>Long Story Short</h2>
+                <hr class="light">
+                <!-- EDU -->
+                <p class="text-faded">
+                    <h3 class="section-heading">Education</h3>
+                    <p>
+                    MSc degree in <i>Mechatronics engineering</i>, University of Trento 2012-2014<br/>
+                    BSc degree in <i>Industrial engineering</i>, University of Trento 2009-2012
+                    </p>
+                </p>
+                
+                <!-- JOBS -->
+                <p class="text-faded">
+                    <h3 class="section-heading">Employement</h3>
+                    <p>
+                    Lead <i>software developer</i> of the <a href="http://www.artool.biz">ARTool</a> project, 2014-Current.
+                    </p>
+                </p>
+                <!-- TECHS -->
+                <p class="text-faded">
+                    <h3 class="section-heading">Techs</h3>
+                    <p>
+                    Decent level: <i>Swift, Objective-C, Apple's Frameworks, C++, C, Ruby, OpenCV, Matlab</i></br>
+                    Base level: <i>HTML, CSS, JS, Python, Maple</i></br>
+                    Others S: <i>Inventor, SolidWorks, Gimp and more...</i></br>
+                    Others: <i>Arduino, Raspberry, base electronic capabilities</i>
+                    </p>
+                </p>
+                <!-- WHY ME? -->
+                <p class="text-faded">
+                    <h3 class="section-heading">Why me?</h3>
+                    <p>
+                    Because I can <i>solve</i> a lot of different problems without stress out the boss.</br>
+                    Because I'm italian, so I can <i>cook</i> some good italian's stuff for you.
+                    </p>
+                </p>
+            </div>
+            </div></br>
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h1>Long Story Short</h1>
-                    <hr class="light">
-
-                    <!-- EDU -->
-                    <p class="text-faded">
-                        <h2 class="section-heading">Education</h2>
-                        <p>
-                        MSc degree in <i>Mechatronics engineering</i>, University of Trento 2012-2014<br/>
-                        BSc degree in <i>Industrial engineering</i>, University of Trento 2009-2012
-                        </p>
-                    </p>
-                    <p>&nbsp;</p>
-                    
-                    <!-- JOBS -->
-                    <p class="text-faded">
-                        <h2 class="section-heading">Employement</h2>
-                        <p>
-                        Lead <i>software developer</i> of the <a href="http://www.artool.biz">ARTool</a> project, 2014-Current.
-                        </p>
-                    </p>
-                    <p>&nbsp;</p>
-
-                    <!-- TECHS -->
-                    <p class="text-faded">
-                        <h2 class="section-heading">Techs</h2>
-                        <p>
-                        Decent level: <i>Swift, Objective-C, Apple's Frameworks, C++, C, Ruby, OpenCV, Matlab</i></br>
-                        Base level: <i>HTML, CSS, JS, Python, Maple</i></br></br>
-                        Others S: <i>Inventor, SolidWorks, Gimp and more...</i></br>
-                        Others: <i>Arduino, Raspberry, base electronic capabilities</i>
-                        </p>
-                    </p>
-                    <p>&nbsp;</p>
-
-                    <!-- WHY ME? -->
-                    <p class="text-faded">
-                        <h2 class="section-heading">Why me?</h2>
-                        <p>
-                        Because I can <i>solve</i> a lot of different problems without stress out the boss.</br>
-                        Because I'm italian, so I can <i>cook</i> some good italian's stuff for you.
-                        </p>
-                    </p>
-                    <p>&nbsp;</p>
-                    
-                    <div class="row">
-                        <button type="button" class="btn btn-info btn-lg">
-                            <a href="cv/amedeosetticv.pdf"><font color="white">Download complete CV</font></a>
-                        </button>
-                        <a class="btn btn-info btn-lg page-scroll" href="#MyLife">Go to my funny pictures</a>
-                    </div>
-                </div>
+                <a class="button" href="cv/amedeosetticv.pdf">Download complete CV</a>
+                <a class="button page-scroll" href="#MyLife">Go to my funny pictures</a>
             </div>
         </div>
     </section>
@@ -306,31 +353,31 @@
             <div class="item active">
                 <img src="images/frizionebw.JPG" alt="My CBR600RR clutch">
                 <div class="carousel-caption">
-                    <a class="btn btn-info btn-lg page-scroll" href="images/frizionebw.JPG">My CBR600RR clutch</a>
+                    <a class="button page-scroll" href="images/frizionebw.JPG">My CBR600RR clutch</a>
                 </div>
             </div>
             <div class="item">
                 <img src="images/cimatosafade.JPG" alt="Cima Tosa, Brenta group">
                 <div class="carousel-caption">
-                    <a class="btn btn-info btn-lg page-scroll" href="images/cimatosafade.JPG">Cima Tosa, Brenta group</a>
+                    <a class="button page-scroll" href="images/cimatosafade.JPG">Cima Tosa, Brenta group</a>
                 </div>
             </div>
             <div class="item">
                 <img src="images/holland.jpg" alt="Trento-Eindhoven... 14 hours">
                 <div class="carousel-caption">
-                    <a class="btn btn-info btn-lg page-scroll" href="images/holland.jpg">Trento-Eindhoven... 14 hours</a>
+                    <a class="button page-scroll" href="images/holland.jpg">Trento-Eindhoven... 14 hours</a>
                 </div>
             </div>
             <div class="item">
                 <img src="images/thumb_DSC_1685_1024.jpg" alt="The place where I live">
                 <div class="carousel-caption">
-                    <a class="btn btn-info btn-lg page-scroll" href="images/thumb_DSC_1685_1024.jpg">The place where I live</a>
+                    <a class="button page-scroll" href="images/thumb_DSC_1685_1024.jpg">The place where I live</a>
                 </div>
             </div>
             <div class="item">
                 <img src="images/kayak1.jpg" alt="My handmade wood-fiberglass kayak">
                 <div class="carousel-caption">
-                    <a class="btn btn-info btn-lg page-scroll" href="images/kayak1.jpg">My handmade wood-fiberglass kayak</a>
+                    <a class="button page-scroll" href="images/kayak1.jpg">My handmade wood-fiberglass kayak</a>
                 </div>
             </div>
         </div>
@@ -359,59 +406,53 @@
 
     <section id="Contact">
         <div class="bg-common bg-contact">
-            <div class="row">
+            <div class="MTBox">
                 <div class="col-lg-8 col-lg-offset-2 text-center ">
-                    <h1>Where you can find me?</h1>
+                    <h2>How to find me</h2>
                     <hr class="light">
                     <p>You can find me on GitHub and StackOveflow, I also have an BitBucket account but is secret...</br></p>
                 </div>
 
                 <div class="col-lg-4 text-center">
-                    <button type="button" class="btn btn-info btn-lg">
-                        <a href="https://github.com/adda25"><font color="white">GitHub</font></a>
-                    </button>
+                    <a class="button" href="https://github.com/adda25"><font color="white">GitHub</font></a>
                 </div>
 
                 <div class="col-lg-4 text-center">
-                    <button type="button" class="btn btn-info btn-lg">
-                        <a href="http://stackoverflow.com/users/5148377/adda-25?tab=profile"><font color="white">Stackoveflow</font></a>
-                    </button>
+                    <a class="button" href="http://stackoverflow.com/users/5148377/adda-25?tab=profile"><font color="white">Stackoveflow</font></a>
                 </div>
 
                 <div class="col-lg-4 text-center">
-                    <button type="button" class="btn btn-info btn-lg">
-                        <a href="https://bitbucket.org/adda25/profile/repositories?visibility=all"><font color="white">BitBucket</font></a>
-                    </button>
+                        <a class="button" href="https://bitbucket.org/adda25/profile/repositories?visibility=all"><font color="white">BitBucket</font></a>
                 </div>
 
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     </br><h2 class="section-heading">Send me a message!</h2>
                     <p>I would be happy if you will contact me via this form!</p>
                 </div>
-            </div>
-            <form class="form-horizontal" role="form" method="post" action="error.html">
-                <div class="form-group">
-                    <label for="name" class="control-label text-center">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="First and Last Name" value="">
-                </div>
-                <div class="form-group">
-                    <label for="email" class="control-label text-center">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
-                </div>
-                <div class="form-group">
-                    <label for="message" class="control-label text-center">Message</label>
-                    <textarea class="form-control" rows="4" name="message"></textarea>
-                </div>
-                <div class="form-group">
-                    <input id="submit" name="submit" type="submit" value="Send" class="btn btn-lg btn-info">
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-10 col-sm-offset-2">
-                        <!-- Will be used to display an alert to the user-->
+                <form class="form-horizontal" role="form" method="post" action="error.html">
+                    <div class="form-group">
+                        <label for="name" class="control-label text-center">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="First and Last Name" value="">
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="email" class="control-label text-center">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="control-label text-center">Message</label>
+                        <textarea class="form-control" rows="4" name="message"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input id="submit" name="submit" type="submit" value="Send" class="button">
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-2">
+                            <!-- Will be used to display an alert to the user-->
+                        </div>
+                    </div>
                 <!--<div class="g-recaptcha" data-sitekey="6LeXFykTAAAAAEtRCagHzqseaVuA18MnP1vNfhke"></div>-->
-            </form>
+                </form>
+            </div>
         </div>
     </section>
 
