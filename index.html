@@ -18,39 +18,40 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed" rel="stylesheet"> <!-- Cambay -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed" rel="stylesheet"> 
 
     <!-- INLINE CSS [PERFORMANCE REASONS] -->
     <style>
+        .border {
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            border-style: solid;
+            border-radius:10px;
+            border-color: rgba(255, 255, 255, 0.2);
+            border-width: 1px;
+        }
+
         .MTBox {
-            -moz-border-radius:0px;
-            -webkit-border-radius:00px;
-            border-radius:5px;
-            border: #solid 10px #000;
-            background-color: rgba(255,255,255,0.05);
+            background-color: rgba(255, 255, 255, 0.05);
             min-width:70vw;
-            min-height:70vh;
+            min-height:80vh;
             margin-left: auto;
             margin-right: auto;
         }
         
         .navbar-inverse {
             background-color: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.1);
-            border-width: 0px;
             width: 100%;
-
         }
         
         .button {
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
             color: white;
-            padding: 15px 32px;
+            width:100%;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
+            font-size: 26px;
         }
 
         body {
@@ -71,7 +72,7 @@
         }
 
         .bg-contact {
-            background-image: url('images/contactchrome.jpg');
+            background-image: url('images/contactchromelight.jpg');
         }
     
         .bg-common {
@@ -88,7 +89,7 @@
             text-align: center;
             padding: 10vh 2vh 10vh;
             color: rgba(255, 255, 255, 1.0);
-            text-shadow: 0px 1px rgba(0, 0, 0, 0.25);
+            text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
         }
 
         h1 {
@@ -149,7 +150,7 @@
     |_| \_|\__,_| \_/ |_|\__, |\__,_|\__|_|\___/|_| |_|
                          |___/                         
     -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse border navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -217,7 +218,7 @@
 
     <section class="bg-common bg-home" id="Home">
         <div class="container-fluid">
-            <div class="MTBox">
+            <div class="MTBox border">
                 <h1>I am Amedeo Setti</h1>
                 <hr class="light">
                 <p class="text-faded">
@@ -225,20 +226,11 @@
                     <p>But I can do a lot of things.</p></br>
                     <p>Some of them very well.</p></br>
                 </p>
-                <!--
-                <div id="content">
-                    <div id="left">
-                       <h1>I am Amedeo Setti</h1>
-                    </div>
-                    <div id="right"> 
-                        <p>I am definitely not one of the best out there.</p></br>
-                        <p>But I can do a lot of things.</p></br>
-                        <p>Some of them very well.</p></br>
-                    </div>
-                </div>
-                -->
             </div>
-            <a class="button page-scroll" href="#About">Read more</a>
+            </br>
+            <a class="button border page-scroll" href="#About">
+                <img src="images/arrow-down-sign-to-navigate.png" height="32"></img>
+            </a>
         </div>
     </section>
 
@@ -255,7 +247,7 @@
 
     <section class="bg-common bg-about" id="About">
         <div class="container-fluid">
-            <div class="MTBox">
+            <div class="MTBox border">
                 <h2>Who is Amedeo?</h2>
                 <hr class="light">
                 <p class="text-faded">
@@ -266,7 +258,10 @@
                     <p>I'm pragmatic.</p></br>
                 </p>
             </div>
-            <a class="button page-scroll" href="#Resume">Go ahead</a>
+            </br>
+            <a class="button border page-scroll" href="#Resume">
+                <img src="images/arrow-down-sign-to-navigate.png" height="32"></img>
+            </a>
         </div>
     </section>
 
@@ -282,7 +277,7 @@
 
     <section class="bg-common bg-resume" id="Resume">
         <div class="container-fluid">
-            <div class="MTBox">
+            <div class="MTBox border">
                 <h2>Long Story Short</h2>
                 <hr class="light">
                 <!-- EDU -->
@@ -316,14 +311,16 @@
                     <h3 class="section-heading">Why me?</h3>
                     <p>
                     Because I can <i>solve</i> a lot of different problems without stress out the boss.</br>
-                    Because I'm italian, so I can <i>cook</i> some good italian's stuff for you.
+                    Because I'm italian, so I can <i>cook</i> some good italian's stuff for you.</br>
+                        <a href="cv/amedeosetticv.pdf">Download complete Curriculum Vitae</a>
                     </p>
                 </p>
             </div>
             </div></br>
-            <div class="row">
-                <a class="button" href="cv/amedeosetticv.pdf">Download complete CV</a>
-                <a class="button page-scroll" href="#MyLife">Go to my funny pictures</a>
+            <div class="container-fluid">
+                <a class="button border page-scroll" href="#MyLife">
+                <img src="images/arrow-down-sign-to-navigate.png" height="32"></img>
+            </a>
             </div>
         </div>
     </section>
@@ -404,25 +401,36 @@
                                     
     -->
 
-    <section id="Contact">
-        <div class="bg-common bg-contact">
-            <div class="MTBox">
+    <section id="Contact" class="bg-common bg-contact">
+        <div class="container-fluid">
+            <div class="MTBox border">
                 <div class="col-lg-8 col-lg-offset-2 text-center ">
                     <h2>How to find me</h2>
                     <hr class="light">
-                    <p>You can find me on GitHub and StackOveflow, I also have an BitBucket account but is secret...</br></p>
                 </div>
 
                 <div class="col-lg-4 text-center">
-                    <a class="button" href="https://github.com/adda25"><font color="white">GitHub</font></a>
+                    <a class="button border" href="https://github.com/adda25">
+                        <img src="images/github-icon.png" height="32">
+                            <font color="white">GitHub</font>
+                        </img>
+                    </a>
                 </div>
 
                 <div class="col-lg-4 text-center">
-                    <a class="button" href="http://stackoverflow.com/users/5148377/adda-25?tab=profile"><font color="white">Stackoveflow</font></a>
+                    <a class="button border" href="http://stackoverflow.com/users/5148377/adda-25?tab=profile">
+                        <img src="images/so-icon.png" height="32">
+                            <font color="white">Stackoveflow</font>
+                        </img>
+                    </a>
                 </div>
 
                 <div class="col-lg-4 text-center">
-                        <a class="button" href="https://bitbucket.org/adda25/profile/repositories?visibility=all"><font color="white">BitBucket</font></a>
+                    <a class="button border" href="https://bitbucket.org/adda25/profile/repositories?visibility=all">
+                        <img src="images/bitbucket-icon.png" height="32">
+                            <font color="white">BitBucket</font>
+                        </img>
+                    </a>
                 </div>
 
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -443,7 +451,7 @@
                         <textarea class="form-control" rows="4" name="message"></textarea>
                     </div>
                     <div class="form-group">
-                        <input id="submit" name="submit" type="submit" value="Send" class="button">
+                        <input id="submit" name="submit" type="submit" value="Send" class="button border">
                     </div>
                     <div class="form-group">
                         <div class="col-sm-10 col-sm-offset-2">
