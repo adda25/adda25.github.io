@@ -19,6 +19,7 @@
     <![endif]-->
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Orbitron|Oswald" rel="stylesheet">
 
     <!-- INLINE CSS [PERFORMANCE REASONS] -->
     <style>
@@ -27,55 +28,51 @@
             -webkit-border-radius:10px;
             border-style: solid;
             border-radius:10px;
-            border-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.03);
             border-width: 1px;
         }
 
         .MTBox {
-            background-color: rgba(255, 255, 255, 0.05);
-            min-width:70vw;
+            width:70vw;
             min-height:80vh;
             margin-left: auto;
             margin-right: auto;
         }
+
+        .navbar .navbar-nav {
+            display: inline-block;
+            float: none;
+            vertical-align: top;
+        }
+
+        .navbar .navbar-collapse {
+            text-align: center;
+        }
         
         .navbar-inverse {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.0);
             width: 100%;
+            text-align: center;
+            list-style-type: none;
+            border-style: solid;
+            border-color: rgba(0, 0, 0, 0.03);
+            border-width: 0px;
         }
         
         .button {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
-            width:100%;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 26px;
+            background-color:rgba(0,0,0,0);
         }
 
         body {
-            font-family: 'Open Sans Condensed', sans-serif;
+            font-family: 'Orbitron', sans-serif;
             overflow-x: hidden;
         }
 
         .bg-home {
-            background-image: url('images/DSC_0458F.jpg'); 
-        }
-
-        .bg-about {
-            background-image: url('images/DSC_0294.jpg');
-        }
-
-        .bg-resume {
-            background-image: url('images/DSC_1688.jpg');
-        }
-
-        .bg-contact {
-            background-image: url('images/contactchromelight.jpg');
-        }
-    
-        .bg-common {
             font-size: auto;
             font-weight: bold;
             position: relative;
@@ -90,28 +87,114 @@
             padding: 10vh 2vh 10vh;
             color: rgba(255, 255, 255, 1.0);
             text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
+            background-image: url('images/DSC_0458FC.jpg'); 
         }
 
+        .bg-about {
+            font-size: auto;
+            font-weight: bold;
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+            background-position: left;
+            text-align: left;
+            padding: 10vh 2vh 10vh;
+            color: rgba(0, 0, 0, 1.0);
+            text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
+            background-image: url('images/DSC_0294W.jpg');
+        }
+
+        .bg-resume {
+            font-size: auto;
+            font-weight: bold;
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+            background-position: right;
+            text-align: right;
+            padding: 10vh 2vh 10vh;
+            color: rgba(255, 255, 255, 1.0);
+            text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
+            background-image: url('images/DSC_1688.jpg');
+        }
+
+        .bg-mylife {
+            font-size: auto;
+            font-weight: bold;
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+            background-position: right;
+            text-align: left;
+            padding: 10vh 2vh 10vh;
+            color: rgba(0, 0, 0, 1.0);
+            text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
+            background-color: rgb(255,255,255);
+        }
+
+        .bg-contact {
+            font-size: auto;
+            font-weight: bold;
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 10vh 2vh 10vh;
+            color: rgba(255, 255, 255, 1.0);
+            text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
+            background-color: rgb(0,0,0);
+        }
+    
         h1 {
+            font-family: 'Orbitron', sans-serif;
             font-size: 80px;
             font-weight: bold;
         }
 
         h2 {
+            font-family: 'Orbitron', sans-serif;
             font-size: 50px;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 30px;
             font-weight: bold;
         }
 
         p {
             font-size: 16px;
-            color: rgba(255, 255, 255, 0.8);
-            text-align: center;
         }
 
         .full-screen {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+        }
+
+
+        /* Declare heights because of positioning of img element */
+        .carousel .item {
+            width: auto;
+            max-height: 80vh;
         }
 
         form { 
@@ -150,7 +233,7 @@
     |_| \_|\__,_| \_/ |_|\__, |\__,_|\__|_|\___/|_| |_|
                          |___/                         
     -->
-    <nav class="navbar navbar-inverse border navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -160,21 +243,24 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand scroll page-scroll" href="#Home">Home</a>
+                
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#About" class="page-scroll">About</a>
+                        <a class="navbar-brand scroll page-scroll" href="#Home">HOME</a>
                     </li>
                     <li>
-                        <a href="#Resume" class="page-scroll">Resume</a>
+                        <a href="#About" class="page-scroll">ABOUT</a>
                     </li>
                     <li>
-                        <a href="#MyLife" class="page-scroll">MyLife</a>
+                        <a href="#Resume" class="page-scroll">RESUME</a>
                     </li>
                     <li>
-                        <a href="#Contact" class="page-scroll">Contact</a>
+                        <a href="#MyLife" class="page-scroll">ME</a>
+                    </li>
+                    <li>
+                        <a href="#Contact" class="page-scroll">CONTACT</a>
                     </li>
                 </ul>
             </div>
@@ -192,35 +278,18 @@
      |_| |_|\___/|_| |_| |_|\___|
                             
     -->
-    <!--
-    <style type="text/css">
-        #content {
-            width: 100%;
-            height: 100%;
-            display: relative;
-        }
 
-        #left {
-            display: relative;
-            width: 50%;
-            height: 50%;
-        }
-
-        #right {
-            display: inline-block;
-            vertical-align: bottom;
-            horizontal-align: right;
-            width: 50%;
-            height: 50%;
-        }
-    </style>
-    -->
-
-    <section class="bg-common bg-home" id="Home">
+    <section class="bg-home" id="Home">
         <div class="container-fluid">
             <div class="MTBox border">
-                <h1>I am Amedeo Setti</h1>
-                <hr class="light">
+            </br></br></br></br></br>
+                <h1>Amedeo Setti</h1>
+                <div contenteditable>
+                    <h3>Mechatronics Engineer <span style="color: #2f79b9">&</span> Software Developer</h3>
+                </div>
+                
+                </br>
+                </br>
                 <p class="text-faded">
                     <p>I am definitely not one of the best out there.</p></br>
                     <p>But I can do a lot of things.</p></br>
@@ -229,7 +298,7 @@
             </div>
             </br>
             <a class="button border page-scroll" href="#About">
-                <img src="images/arrow-down-sign-to-navigate.png" height="32"></img>
+                <img src="images/down-arrow.png" height="32"></img>
             </a>
         </div>
     </section>
@@ -245,11 +314,11 @@
                                
     -->
 
-    <section class="bg-common bg-about" id="About">
+    <section class="bg-about" id="About">
         <div class="container-fluid">
             <div class="MTBox border">
                 <h2>Who is Amedeo?</h2>
-                <hr class="light">
+                </br>
                 <p class="text-faded">
                     <p>I'm 26 years old Mechatronic engineer from Trento, Italy.</p></br>
                     <p>I'm in love with software developing.</p></br>
@@ -259,9 +328,11 @@
                 </p>
             </div>
             </br>
-            <a class="button border page-scroll" href="#Resume">
-                <img src="images/arrow-down-sign-to-navigate.png" height="32"></img>
-            </a>
+            <div style="text-align:center">
+                <a  class="button border page-scroll" href="#Resume">
+                    <img src="images/down-arrow.png" height="32"></img>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -275,17 +346,16 @@
                                           
     -->
 
-    <section class="bg-common bg-resume" id="Resume">
+    <section class="bg-resume" id="Resume">
         <div class="container-fluid">
             <div class="MTBox border">
                 <h2>Long Story Short</h2>
-                <hr class="light">
                 <!-- EDU -->
                 <p class="text-faded">
                     <h3 class="section-heading">Education</h3>
                     <p>
-                    MSc degree in <i>Mechatronics engineering</i>, University of Trento 2012-2014<br/>
-                    BSc degree in <i>Industrial engineering</i>, University of Trento 2009-2012
+                    MSc degree in <i>Mechatronics engineering</i> - University of Trento 2012-2014<br/>
+                    BSc degree in <i>Industrial engineering</i> - University of Trento 2009-2012
                     </p>
                 </p>
                 
@@ -300,10 +370,10 @@
                 <p class="text-faded">
                     <h3 class="section-heading">Techs</h3>
                     <p>
-                    Decent level: <i>Swift, Objective-C, Apple's Frameworks, C++, C, Ruby, OpenCV, Matlab</i></br>
-                    Base level: <i>HTML, CSS, JS, Python, Maple</i></br>
-                    Others S: <i>Inventor, SolidWorks, Gimp and more...</i></br>
-                    Others: <i>Arduino, Raspberry, base electronic capabilities</i>
+                    <i>Swift, Objective-C, Apple's Frameworks, C++, C, Ruby, OpenCV </i></br>
+                    <i>HTML, CSS, JS, Python, Matlab, Maple, ANSYS, Arduino </i></br>
+                    <i>Raspberry, Inventor, SolidWorks, Gimp</i></br>
+                    <i>and more...</i>
                     </p>
                 </p>
                 <!-- WHY ME? -->
@@ -312,14 +382,14 @@
                     <p>
                     Because I can <i>solve</i> a lot of different problems without stress out the boss.</br>
                     Because I'm italian, so I can <i>cook</i> some good italian's stuff for you.</br>
-                        <a href="cv/amedeosetticv.pdf">Download complete Curriculum Vitae</a>
+                    <a href="cv/amedeosetticv.pdf">Download complete Curriculum Vitae</a>
                     </p>
                 </p>
             </div>
             </div></br>
-            <div class="container-fluid">
+            <div style="text-align:center">
                 <a class="button border page-scroll" href="#MyLife">
-                <img src="images/arrow-down-sign-to-navigate.png" height="32"></img>
+                <img src="images/down-arrow.png" height="32"></img>
             </a>
             </div>
         </div>
@@ -335,61 +405,88 @@
              |___/              
     -->
 
-    <div id="MyLife" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#mycarousel" data-slide-to="1"></li>
-            <li data-target="#mycarousel" data-slide-to="2"></li>
-            <li data-target="#mycarousel" data-slide-to="3"></li>
-            <li data-target="#mycarousel" data-slide-to="4"></li>
-        </ol>
-        
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="images/frizionebw.JPG" alt="My CBR600RR clutch">
-                <div class="carousel-caption">
-                    <a class="button page-scroll" href="images/frizionebw.JPG">My CBR600RR clutch</a>
-                </div>
+    <section class="bg-mylife" id="MyLife">
+        <div class="container-fluid">
+            <div class="MTBox border">
+                 <div class="row">
+                    <div class="col-md-6 portfolio-item">
+                        <h2>Pictures life</h2>
+                        <p>
+                        Here there are some pictures on my daily life.</br>
+                        As you can see, I like mountains, motorbikes</br>
+                        and computers..</br>
+                        </p>
+                        </br>
+                        <h3>General description</h3>
+                        <p>
+                        I started to climb four years ago.</br>
+                        I ride motorbikes since when I was fifthteen.</br>
+                        My first PC was an old Windows98 with 64MB of RAM.</br>
+                        </p>
+                    </div>
+                    <div class="col-md-6 portfolio-item">
+                        <div id="Slides" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#mycarousel" data-slide-to="1"></li>
+                                <li data-target="#mycarousel" data-slide-to="2"></li>
+                                <li data-target="#mycarousel" data-slide-to="3"></li>
+                                <li data-target="#mycarousel" data-slide-to="4"></li>
+                            </ol>
+                            
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="images/frizionebw.JPG" alt="My CBR600RR clutch">
+                                    <div class="carousel-caption">
+                                        <a class="button page-scroll" href="images/frizionebw.JPG">My CBR600RR clutch</a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/cimatosafade.JPG" alt="Cima Tosa, Brenta group">
+                                    <div class="carousel-caption">
+                                        <a class="button page-scroll" href="images/cimatosafade.JPG">Cima Tosa, Brenta group</a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/holland.jpg" alt="Trento-Eindhoven... 14 hours">
+                                    <div class="carousel-caption">
+                                        <a class="button page-scroll" href="images/holland.jpg">Trento-Eindhoven... 14 hours</a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/thumb_DSC_1685_1024.jpg" alt="The place where I live">
+                                    <div class="carousel-caption">
+                                        <a class="button page-scroll" href="images/thumb_DSC_1685_1024.jpg">The place where I live</a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/kayak1.jpg" alt="My handmade wood-fiberglass kayak">
+                                    <div class="carousel-caption">
+                                        <a class="button page-scroll" href="images/kayak1.jpg">My handmade wood-fiberglass kayak</a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <a class="left carousel-control" href="#Slides" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#Slides" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>            
             </div>
-            <div class="item">
-                <img src="images/cimatosafade.JPG" alt="Cima Tosa, Brenta group">
-                <div class="carousel-caption">
-                    <a class="button page-scroll" href="images/cimatosafade.JPG">Cima Tosa, Brenta group</a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="images/holland.jpg" alt="Trento-Eindhoven... 14 hours">
-                <div class="carousel-caption">
-                    <a class="button page-scroll" href="images/holland.jpg">Trento-Eindhoven... 14 hours</a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="images/thumb_DSC_1685_1024.jpg" alt="The place where I live">
-                <div class="carousel-caption">
-                    <a class="button page-scroll" href="images/thumb_DSC_1685_1024.jpg">The place where I live</a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="images/kayak1.jpg" alt="My handmade wood-fiberglass kayak">
-                <div class="carousel-caption">
-                    <a class="button page-scroll" href="images/kayak1.jpg">My handmade wood-fiberglass kayak</a>
-                </div>
+            </br>
+            <div style="text-align:center">
+                <a  class="button border page-scroll" href="#Contact">
+                    <img src="images/down-arrow.png" height="32"></img>
+                </a>
             </div>
         </div>
-    
-        <!-- Controls -->
-        <a class="left carousel-control" href="#MyLife" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#MyLife" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-
+    </section>
 
 
     <!--
@@ -401,18 +498,17 @@
                                     
     -->
 
-    <section id="Contact" class="bg-common bg-contact">
+    <section class="bg-contact" id="Contact">
         <div class="container-fluid">
             <div class="MTBox border">
                 <div class="col-lg-8 col-lg-offset-2 text-center ">
                     <h2>How to find me</h2>
-                    <hr class="light">
                 </div>
 
                 <div class="col-lg-4 text-center">
                     <a class="button border" href="https://github.com/adda25">
                         <img src="images/github-icon.png" height="32">
-                            <font color="white">GitHub</font>
+                            <font color="2f79b9">GitHub</font>
                         </img>
                     </a>
                 </div>
@@ -420,7 +516,7 @@
                 <div class="col-lg-4 text-center">
                     <a class="button border" href="http://stackoverflow.com/users/5148377/adda-25?tab=profile">
                         <img src="images/so-icon.png" height="32">
-                            <font color="white">Stackoveflow</font>
+                            <font color="2f79b9">Stackoveflow</font>
                         </img>
                     </a>
                 </div>
@@ -428,7 +524,7 @@
                 <div class="col-lg-4 text-center">
                     <a class="button border" href="https://bitbucket.org/adda25/profile/repositories?visibility=all">
                         <img src="images/bitbucket-icon.png" height="32">
-                            <font color="white">BitBucket</font>
+                            <font color="2f79b9">BitBucket</font>
                         </img>
                     </a>
                 </div>
@@ -451,7 +547,9 @@
                         <textarea class="form-control" rows="4" name="message"></textarea>
                     </div>
                     <div class="form-group">
-                        <input id="submit" name="submit" type="submit" value="Send" class="button border">
+                    <font color="2f79b9">
+                        <input id="submit" name="submit" type="submit" value="Send" class="button">
+                        </font>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-10 col-sm-offset-2">
@@ -476,10 +574,12 @@
      <footer>
          <div class="row">
              <div class="col-lg-12 text-center">
-                 Copyright &copy; Amedeo Setti 2016, developed by Amedeo Setti. Source code is on my <a href="https://github.com/adda25/adda25.github.io"><font color="blue">GitHub</font></a>
+                 Copyright &copy; Amedeo Setti 2016, developed by Amedeo Setti. Source code is on my <a href="https://github.com/adda25/adda25.github.io">GitHub</a></br>
+                 Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
              </div>
          </div>
      </footer>
+
 
 
     <!--
