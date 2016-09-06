@@ -27,7 +27,19 @@
     <!-- reCAPTCHA -->
     <!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
   </head>
+
+
+  <!--
+     ____   ___  ______   __
+    | __ ) / _ \|  _ \ \ / /
+    |  _ \| | | | | | \ V / 
+    | |_) | |_| | |_| || |  
+    |____/ \___/|____/ |_|  
+
+  -->
+
   <body data-spy="scroll" data-target=".navbar-inverse" data-offset="50">
+
     <!-- 
      _   _             _             _   _             
     | \ | | __ ___   _(_) __ _  __ _| |_(_) ___  _ __  
@@ -36,6 +48,7 @@
     |_| \_|\__,_| \_/ |_|\__, |\__,_|\__|_|\___/|_| |_|
                          |___/                         
     -->
+
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -287,10 +300,14 @@
                                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
                                 </a>
+
                             </div>
+                            <div class="new-caption-area"></div> 
                         </div>
-                    </div>            
+                    </div>  
+
                 </div>
+                
                 </br>
                 <div style="text-align:center">
                     <a  class="button border page-scroll" href="#Contact">
@@ -349,15 +366,12 @@
                     </div>
                     <form class="form-horizontal" role="form" method="post" action="javascript:manageForm();">
                         <div class="form-group">
-                            
                             <input type="text" class="form-control" id="name" name="name" placeholder="First and Last Name" value="">
                         </div>
                         <div class="form-group">
-                            
                             <input type="email" class="form-control" id="email" name="email" placeholder="Email: example@domain.com" value="">
                         </div>
                         <div class="form-group">
-                            
                             <textarea class="form-control" rows="4" name="message" placeholder="Message"></textarea>
                         </div>
                         <div class="form-group">
@@ -450,6 +464,19 @@
                 event.preventDefault();
             });
         });
+
+        jQuery(function ($) {
+            $('.carousel').carousel();
+            var caption = $('div.item:nth-child(1) .carousel-caption');
+            $('.new-caption-area').html(caption.html());
+            caption.css('display', 'none');
+        
+            $(".carousel").on('slide.bs.carousel', function (evt) {
+                var caption = $('div.item:nth-child(' + ($(evt.relatedTarget).index() + 1) + ') .carousel-caption');
+                $('.new-caption-area').html(caption.html());
+                caption.css('display', 'none');
+        });
+});
     </script>
 
   </body>

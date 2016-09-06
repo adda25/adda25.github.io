@@ -32,6 +32,8 @@ function setImages() {
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\
 // Form handling
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// Thanks to Matteo Ragni
+// https://github.com/MatteoRagni
 
 $("input[name=submit]").click(function(e) {
   var mess = $("textarea[name=message]").val();

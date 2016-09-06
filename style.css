@@ -191,6 +191,14 @@ p {
     max-height: 75vh;
 }
 
+.portfolio-item, .new-caption-area {
+    margin: auto;
+  }
+  
+  .carousel-caption {
+    color: #000;
+}
+
 form { 
     margin: 0 auto; 
     width:40vh;
