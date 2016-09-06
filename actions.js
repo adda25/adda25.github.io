@@ -34,12 +34,11 @@ function setImages() {
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 $("input[name=submit]").click(function(e) {
-  var name = $("textarea[name=name]").val();
   var mess = $("textarea[name=message]").val();
   var mail = $("input[name=mail]").val();
   if (mess != "") {
     $.post("http://asetti.altervista.org/respond.php",
-      {name: name, message: mess, mail: mail}).
+      {message: mess, mail: mail}).
       done(function(d) { console.log(d);
         if(d == "NO") {
           alert("There was an error...");
