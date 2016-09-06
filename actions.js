@@ -37,7 +37,7 @@ $("input[name=submit]").click(function(e) {
   var mess = $("textarea[name=message]").val();
   var mail = $("input[name=mail]").val();
   if (mess != "") {
-    $.post("http://asetti.altervista.org/respond.php",
+    $.post("http://asetti.altervista.org/form.php",
       {message: mess, mail: mail}).
       done(function(d) { console.log(d);
         if(d == "NO") {
