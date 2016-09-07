@@ -12,6 +12,7 @@
     min-height:75vh; /*  DA CAMBIARE */
     margin-left: auto;
     margin-right: auto;
+    padding: 0px 25px 0px 25px;
 }
 
 .navbar .navbar-nav {
@@ -83,6 +84,7 @@ body {
     color: rgba(255, 255, 255, 1.0);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
     background-image: url('images/DSC_0458FC.jpg'); 
+    /*background-attachment:fixed;*/
 }
 
 .bg-about {
@@ -101,6 +103,7 @@ body {
     color: rgba(0, 0, 0, 1.0);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
     background-image: url('images/DSC_0294W.jpg');
+    background-attachment:fixed;
 }
 
 .bg-resume {
@@ -119,6 +122,7 @@ body {
     color: rgba(255, 255, 255, 1.0);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
     background-image: url('images/DSC_1688.jpg');
+    /*background-attachment:fixed;*/
 }
 
 .bg-mylife {
@@ -185,7 +189,7 @@ p {
     background-repeat: no-repeat;
 }
 
-/* Declare heights because of positioning of img element */
+
 .carousel .item {
     width: auto;
     max-height: 75vh;
@@ -201,7 +205,7 @@ p {
 
 form { 
     margin: 0 auto; 
-    width:40vh;
+    width:50%;
 }
 
 @media(min-width:100px) {
