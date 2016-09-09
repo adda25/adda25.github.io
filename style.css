@@ -163,19 +163,19 @@ body {
 
 h1 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 80px;
+    font-size: 60px;
     font-weight: bold;
 }
 
 h2 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 50px;
+    font-size: 35px;
     font-weight: bold;
 }
 
 h3 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
 }
 
@@ -208,6 +208,27 @@ form {
     width:50%;
 }
 
+/* For desktop screens, increase the fonts sizes */
+@media only screen and (min-width: 500px) {
+    h1 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 80px;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 50px;
+        font-weight: bold;
+    }
+    
+    h3 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+
 @media(min-width:100px) {
     .navbar {
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -225,7 +246,7 @@ form {
     background: #000 !important;
     color: #0f0 !important;
     outline: solid #f00 1px !important;
-}*/
+} */
 
 .animation-element {
   position: relative;
