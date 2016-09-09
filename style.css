@@ -161,6 +161,9 @@ body {
     background-color: rgb(0,0,0);
 }
 
+/* #################################### */
+/* MOBILE FONT SIZES */
+/* #################################### */
 h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: 60px;
@@ -180,8 +183,10 @@ h3 {
 }
 
 p {
-    font-size: 16px;
+    font-size: 12px;
 }
+/* #################################### */
+/* #################################### */
 
 .full-screen {
     background-size: cover;
@@ -226,6 +231,10 @@ form {
         font-family: 'Orbitron', sans-serif;
         font-size: 30px;
         font-weight: bold;
+    }
+
+    p {
+        font-size: 16px;
     }
 }
 
