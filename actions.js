@@ -38,8 +38,6 @@ function setImages() {
 $("input[name=submit]").click(function(e) {
   var mess = $("textarea[name=message]").val();
   var mail = $("input[name=email]").val();
-  console.log(mail)
-  console.log(mess)
   if (mess != "") {
     $.post("http://asetti.altervista.org/respond.php",
       {message: mess, mail: mail}).
