@@ -64,7 +64,7 @@ body {
     margin-right:auto;
     left:0;
     right:0;
-    font-family: 'Fira Mono', monospace;
+    font-family: 'Open Sans Condensed', sans-serif;
     overflow-x: hidden;
 }
 
@@ -320,7 +320,7 @@ Main Animation
   color: #ffffff;
   font-size: 32px;
   text-align: center;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 600;
 }
 
