@@ -19,18 +19,22 @@
     display: inline-block;
     float: none;
     vertical-align: top;
+
 }
 
 .navbar .navbar-collapse {
     text-align: center;
-    background-color:rgba(0,0,0,1);
+    background-color: rgba(0, 0, 0, 1.0);
 }
 
 .navbar-inverse {
     width: 100%;
     text-align: center;
     list-style-type: none;
-    background-color:rgba(0,0,0,1.0);
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.03);
+    border-width: 0px;
+    background-color: rgba(0, 0, 0, 1.0);
 }
 
 .button {
@@ -81,7 +85,7 @@ body {
     padding: 10vh 2vh 10vh;
     color: rgba(255, 255, 255, 1.0);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
-    background-image: url('images/chiavi3S.jpg'); 
+    background-image: url('images/homechiavi3.JPG'); 
     /*background-attachment:fixed;*/
 }
 
@@ -95,10 +99,10 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-position: right;
+    background-position: center;
     text-align: left;
     padding: 10vh 2vh 10vh;
-    color: rgba(255, 255, 255, 1.0);
+    color: rgba(0, 0, 0, 1.0);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
     background-image: url('images/DSC_0294W.jpg');
     background-attachment:fixed;
@@ -119,8 +123,7 @@ body {
     padding: 10vh 2vh 10vh;
     color: rgba(255, 255, 255, 1.0);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
-    background-image: url('images/DSC_1688C.jpg');
-    /*background-attachment:fixed;*/
+    background-image: url('images/DSC_1688.jpg');
 }
 
 .bg-mylife {
@@ -140,6 +143,7 @@ body {
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
     background-color: rgb(255,255,255);
     background-image: url('images/DSC_0595.JPG');
+    background-attachment:fixed;
 }
 
 .bg-contact {
@@ -177,7 +181,7 @@ h2 {
 
 h3 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 25px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -235,10 +239,6 @@ form {
     p {
         font-size: 16px;
     }
-
-    .bg-about {
-        color: rgba(0, 0, 0, 1.0);
-    }
 }
 
 @media(min-width:100px) {
@@ -274,7 +274,7 @@ form {
   -webkit-transform: translate3d(0px, 200px, 0px);
   -o-transform: translate(0px, 200px);
   -ms-transform: translate(0px, 200px);
-  transform: translate3d(0px, 200, 0px);
+  transform: translate3d(0px, 200px, 0px);
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -352,37 +352,6 @@ Main Animation
   font-weight: 600;
 }
 
-.text-anim {
-    span {
-        opacity: 0;
-        @include anim-transition (all, 550ms);
-        @include anim-filter(blur, 25px);
-        @include anim-transform(translateZ, 0);
-    }
-
-    $letters: 22; // Define number of letters in animation - including spaces
-    $timing: 35ms; // Delay between letters
-
-    // Sets timing differntly for each letter
-    @while $letters > 0 {
-        span:nth-child(#{$letters}) { 
-            -webkit-transition-delay: $timing * $letters;
-            -moz-transition-delay: $timing * $letters;
-            -ms-transition-delay: $timing * $letters;
-            transition-delay: $timing * $letters;
-        }
-        $letters: $letters - 1;
-    }
-}
-
-
-.text-anim.animate span {
-      opacity: 1;
-      @include anim-filter(blur, 0px);
-}
-
-
-/*  */
 
 .imageViewController {
     margin-left:auto;
@@ -421,6 +390,7 @@ Main Animation
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgba(255,255,255,1.0);
+    transition: all 0.2s ease-in-out;
 }
 
 .thumbView {
@@ -429,8 +399,8 @@ Main Animation
     left:0;
     right:0;
     overflow-x: hidden;
-    width: 5vw;
-    min-height: 5vh;
+    width: 6vw;
+    min-height: 6vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -439,6 +409,7 @@ Main Animation
     background-color: rgba(100,100,100,0.1);
     opacity: 0.25;
     outline:1px solid rgba(240,240,240,0.3);
+    transition: all 0.2s ease-in-out;
 }
 
 .imageButton {

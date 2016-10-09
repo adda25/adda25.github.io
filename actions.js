@@ -1,13 +1,9 @@
-function alertFormNotImplementedYet() {
-  alert("Hello! Form is not active yet");
-}
 
 function setTitle(title) {
   var str = '<h1 class="page-header">'.concat(title).concat('</h1>')
   var msg = str
   document.getElementById('name').innerHTML = msg;
 }
-
 
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\
 // For carousel images handling
@@ -87,8 +83,6 @@ $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
 
 
-
-
 setInterval(function(){ 
  $('.text-anim').toggleClass('animate');
 },2000);
@@ -104,22 +98,6 @@ $(window).scroll(function() {
   }
  });
 
-
-/*
-$(document).ready(function() {
-    $("#imageView1").click(function(e) {
-        var offset_t = $(this).offset().top - $(window).scrollTop();
-      var offset_l = $(this).offset().left - $(window).scrollLeft();
-      var left = Math.round( (e.clientX - offset_l) );
-      var right = -left + e.clientX;
-      var top = Math.round( (e.clientY - offset_t) );
-      if (left >= right) {
-        Pics.nextImage();
-      } else {
-        Pics.previusImage();
-      }
-    });
-});*/
 
 $(document).ready(function() {
     $("#thumbView0").click(function() {
@@ -165,29 +143,10 @@ var Pics = {
   _lastThIdx: 0, /* Private */
   _lastOp: 1,    /* Private */
 
-  nextImage: function() {
-    if (this._lastOp == 0) { this.index++;}
-    this._lastOp = 1;
-    document.getElementById(this.mainView).style.backgroundImage = "url('" + this.images[this.index] + "')";
-    this.nextThumbnail(this.index);   
-    this.index = this.index + 1;
-    if (this.index >= this.images.length) { this.index--; }
-  },
-
-  previusImage: function() {
-    if (this._lastOp == 1) { this.index--;}
-    this._lastOp = 0;
-    document.getElementById(this.mainView).style.backgroundImage = "url('" + this.images[this.index] + "')";
-    this.nextThumbnail(this.index);
-    this.index = this.index - 1;
-    if (this.index < 0) { this.index = 0; }
-  },
-
   nextThumbnail: function(currentIndex) {
-    document.getElementById(this.thumbs[this._lastThIdx]).style.opacity = 0.25;
+    document.getElementById(this.thumbs[this._lastThIdx]).style.opacity = 0.5;
     this._lastThIdx = currentIndex;
     document.getElementById(this.thumbs[currentIndex]).style.opacity = 1.0;
-    /* TODO: Update thumbs if _lastThIdx is totally on right side or left side */
   },
 
   setAtIndex: function(index) {
@@ -197,7 +156,7 @@ var Pics = {
   },
 
   setup: function() {
-    this.nextImage();
+    this.setAtIndex(0);
     for (var i = 0; i < 6; i++) {
       if (i >= 6) {
         break;
@@ -209,7 +168,3 @@ var Pics = {
 
 };
 
-
-function testjs() {
-  Pics.caruselImage()
-}
