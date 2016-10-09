@@ -166,7 +166,7 @@ var Pics = {
   _lastOp: 1,    /* Private */
 
   nextImage: function() {
-if (this._lastOp == 0) { this.index++;}
+    if (this._lastOp == 0) { this.index++;}
     this._lastOp = 1;
     document.getElementById(this.mainView).style.backgroundImage = "url('" + this.images[this.index] + "')";
     this.nextThumbnail(this.index);   
