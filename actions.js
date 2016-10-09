@@ -103,3 +103,113 @@ $(window).scroll(function() {
     $('#main-nav').fadeOut();
   }
  });
+
+
+/*
+$(document).ready(function() {
+    $("#imageView1").click(function(e) {
+        var offset_t = $(this).offset().top - $(window).scrollTop();
+      var offset_l = $(this).offset().left - $(window).scrollLeft();
+      var left = Math.round( (e.clientX - offset_l) );
+      var right = -left + e.clientX;
+      var top = Math.round( (e.clientY - offset_t) );
+      if (left >= right) {
+        Pics.nextImage();
+      } else {
+        Pics.previusImage();
+      }
+    });
+});*/
+
+$(document).ready(function() {
+    $("#thumbView0").click(function() {
+      Pics.setAtIndex(0);
+    });
+});
+
+$(document).ready(function() {
+    $("#thumbView1").click(function() {
+      Pics.setAtIndex(1);
+    });
+});
+
+$(document).ready(function() {
+    $("#thumbView2").click(function() {
+      Pics.setAtIndex(2);
+    });
+});
+
+$(document).ready(function() {
+    $("#thumbView3").click(function() {
+      Pics.setAtIndex(3);
+    });
+});
+
+$(document).ready(function() {
+    $("#thumbView4").click(function() {
+      Pics.setAtIndex(4);
+    });
+});
+
+$(document).ready(function() {
+    $("#thumbView5").click(function() {
+      Pics.setAtIndex(5);
+    });
+});
+
+var Pics = { 
+  index: 0,
+  images: [],
+  mainView: "",
+  thumbs: [],
+  _lastThIdx: 0, /* Private */
+  _lastOp: 1,    /* Private */
+
+  nextImage: function() {
+if (this._lastOp == 0) { this.index++;}
+    this._lastOp = 1;
+    document.getElementById(this.mainView).style.backgroundImage = "url('" + this.images[this.index] + "')";
+    this.nextThumbnail(this.index);   
+    this.index = this.index + 1;
+    if (this.index >= this.images.length) { this.index--; }
+  },
+
+  previusImage: function() {
+    if (this._lastOp == 1) { this.index--;}
+    this._lastOp = 0;
+    document.getElementById(this.mainView).style.backgroundImage = "url('" + this.images[this.index] + "')";
+    this.nextThumbnail(this.index);
+    this.index = this.index - 1;
+    if (this.index < 0) { this.index = 0; }
+  },
+
+  nextThumbnail: function(currentIndex) {
+    document.getElementById(this.thumbs[this._lastThIdx]).style.opacity = 0.25;
+    this._lastThIdx = currentIndex;
+    document.getElementById(this.thumbs[currentIndex]).style.opacity = 1.0;
+    /* TODO: Update thumbs if _lastThIdx is totally on right side or left side */
+  },
+
+  setAtIndex: function(index) {
+    document.getElementById(this.mainView).style.backgroundImage = "url('" + this.images[index] + "')";
+    this.nextThumbnail(index);    
+    this.index = this.index + 1;
+  },
+
+  setup: function() {
+    this.nextImage();
+    for (var i = 0; i < 6; i++) {
+      if (i >= 6) {
+        break;
+      } else {
+        document.getElementById(this.thumbs[i]).style.backgroundImage = "url('" + this.images[i] + "')";
+      }
+    }
+  }
+
+};
+
+
+function testjs() {
+  Pics.caruselImage()
+}
