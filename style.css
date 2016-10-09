@@ -19,10 +19,12 @@
     display: inline-block;
     float: none;
     vertical-align: top;
+    background-color:rgba(0,0,0,1);
 }
 
 .navbar .navbar-collapse {
     text-align: center;
+    background-color:rgba(0,0,0,1);
 }
 
 .navbar-inverse {
@@ -30,9 +32,7 @@
     width: 100%;
     text-align: center;
     list-style-type: none;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.03);
-    border-width: 0px;
+    background-color:rgba(0,0,0,1);
 }
 
 .button {
@@ -83,7 +83,7 @@ body {
     padding: 10vh 2vh 10vh;
     color: rgba(255, 255, 255, 1.0);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
-    background-image: url('images/moto2.jpg'); 
+    background-image: url('images/chiavi.jpg'); 
     /*background-attachment:fixed;*/
 }
 
@@ -100,7 +100,7 @@ body {
     background-position: right;
     text-align: left;
     padding: 10vh 2vh 10vh;
-    color: rgba(0, 0, 0, 1.0);
+    color: rgba(255, 255, 255, 1.0);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
     background-image: url('images/DSC_0294W.jpg');
     background-attachment:fixed;
@@ -236,6 +236,10 @@ form {
     p {
         font-size: 16px;
     }
+
+    .bg-about {
+        color: rgba(0, 0, 0, 1.0);
+    }
 }
 
 @media(min-width:100px) {
@@ -278,6 +282,31 @@ form {
 }
 
 .bounce-up.in-view .MTBox {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.bounce-left .MTBox {
+  opacity: 0;
+  -moz-transition: all 1000ms ease-out;
+  -webkit-transition: all 1000ms ease-out;
+  -o-transition: all 1000ms ease-out;
+  transition: all 1000ms ease-out;
+  -moz-transform: translate3d(200px, 0px, 0px);
+  -webkit-transform: translate3d(200px, 0px, 0px);
+  -o-transform: translate(200px, 0px);
+  -ms-transform: translate(200px, 0px);
+  transform: translate3d(200px, 0px, 0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bounce-left.in-view .MTBox {
   opacity: 1;
   -moz-transform: translate3d(0px, 0px, 0px);
   -webkit-transform: translate3d(0px, 0px, 0px);

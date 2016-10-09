@@ -89,6 +89,17 @@ $window.trigger('scroll');
 
 
 
-  setInterval(function(){ 
-   $('.text-anim').toggleClass('animate');
-  },2000);
+setInterval(function(){ 
+ $('.text-anim').toggleClass('animate');
+},2000);
+
+
+$('#main-nav').hide();
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 600) {
+      $('#main-nav').fadeIn();
+  }
+  else {
+    $('#main-nav').fadeOut();
+  }
+ });
