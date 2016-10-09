@@ -5,31 +5,12 @@ function setTitle(title) {
   document.getElementById('name').innerHTML = msg;
 }
 
-// \\\\\\\\\\\\\\\\\\\\\\\\\\\\
-// For carousel images handling
-// \\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/**
+  Form handling
 
-function setImages() {
-  var folder = "images/";
-  $.ajax({
-      url : folder,
-      success: function (data) {
-          $(data).find("a").attr("href", function (i, val) {
-              if( val.match(/\.(JPG|jpg|png|gif)$/) ) { 
-                  $("body").append( "<img src='"+ folder + val +"'>" );
-              } 
-          });
-          console.log(data);
-      }
-  });
-}
-
-
-// \\\\\\\\\\\\\\\\\\\\\\\\\\\\
-// Form handling
-// \\\\\\\\\\\\\\\\\\\\\\\\\\\\
-// Thanks to Matteo Ragni
-// https://github.com/MatteoRagni
+  Thanks to Matteo Ragni
+  https://github.com/MatteoRagni
+*/
 
 $("input[name=submit]").click(function(e) {
   var mess = $("textarea[name=message]").val();
@@ -51,9 +32,9 @@ $("input[name=submit]").click(function(e) {
   return false;
 })
 
-// \\\\\\\\\\\\\\\\\\\\\\\\\\\\
-// Scroll animation JS
-// \\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/**
+  Scroll animation JS
+*/
 
 var $animation_elements = $('.animation-element');
 var $window = $(window);
@@ -82,12 +63,14 @@ function check_if_in_view() {
 $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
 
-
 setInterval(function(){ 
  $('.text-anim').toggleClass('animate');
 },2000);
 
 
+/**
+  Navbar only after first section
+*/
 $('#main-nav').hide();
 $(window).scroll(function() {
   if ($(this).scrollTop() > 600) {
@@ -98,6 +81,15 @@ $(window).scroll(function() {
   }
  });
 
+
+/*
+ ___                          __     ___               
+|_ _|_ __ ___   __ _  __ _  __\ \   / (_) _____      __
+ | || '_ ` _ \ / _` |/ _` |/ _ \ \ / /| |/ _ \ \ /\ / /
+ | || | | | | | (_| | (_| |  __/\ V / | |  __/\ V  V / 
+|___|_| |_| |_|\__,_|\__, |\___| \_/  |_|\___| \_/\_/  
+                     |___/                             
+*/
 
 $(document).ready(function() {
     $("#thumbView0").click(function() {

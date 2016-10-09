@@ -1,3 +1,11 @@
+/*
+// Debug util
+* { 
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+} */
+
 .border {
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
@@ -19,7 +27,6 @@
     display: inline-block;
     float: none;
     vertical-align: top;
-
 }
 
 .navbar .navbar-collapse {
@@ -53,13 +60,14 @@
     -ms-animation: pulse 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
     animation: pulse 2.25s infinite cubic-bezier(0.66, 0, 0, 1);
 }
+
 .pulse:hover {
     -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
 }
-    @-webkit-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(47, 121, 185, 0.0);}}
-    @-moz-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(47, 121, 185, 0.0);}}
-    @-ms-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(47, 121, 185, 0.0);}}
-    @keyframes pulse {to {box-shadow: 0 0 0 30px rgba(47, 121, 185, 0.0);}}
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(47, 121, 185, 0.0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(47, 121, 185, 0.0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(47, 121, 185, 0.0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 30px rgba(47, 121, 185, 0.0);}}
 
 body {
     margin-left:auto;
@@ -86,7 +94,7 @@ body {
     color: rgba(255, 255, 255, 1.0);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
     background-image: url('images/homechiavi3.JPG'); 
-    /*background-attachment:fixed;*/
+    background-attachment:fixed;
 }
 
 .bg-about {
@@ -99,7 +107,7 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-position: center;
+    background-position: right;
     text-align: left;
     padding: 10vh 2vh 10vh;
     color: rgba(0, 0, 0, 1.0);
@@ -253,13 +261,6 @@ form {
     }
 }
 
-/*
-* { 
-    background: #000 !important;
-    color: #0f0 !important;
-    outline: solid #f00 1px !important;
-} */
-
 .animation-element {
   position: relative;
 }
@@ -338,10 +339,8 @@ form {
     transform: #{$property}unquote("(#{$value})"); 
 }
 
-/* 
-==========================================================================
-Main Animation  
-========================================================================== 
+/** 
+    Main Animation  
 */
 
 .text-anim {
@@ -352,6 +351,15 @@ Main Animation
   font-weight: 600;
 }
 
+/*
+ ___                          __     ___               
+|_ _|_ __ ___   __ _  __ _  __\ \   / (_) _____      __
+ | || '_ ` _ \ / _` |/ _` |/ _ \ \ / /| |/ _ \ \ /\ / /
+ | || | | | | | (_| | (_| |  __/\ V / | |  __/\ V  V / 
+|___|_| |_| |_|\__,_|\__, |\___| \_/  |_|\___| \_/\_/  
+                     |___/                             
+
+*/
 
 .imageViewController {
     margin-left:auto;
