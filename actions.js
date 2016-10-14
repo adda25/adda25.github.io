@@ -74,9 +74,8 @@ setInterval(function(){
 $('#main-nav').hide();
 $(window).scroll(function() {
   if ($(this).scrollTop() > 600) {
-      $('#main-nav').fadeIn();
-  }
-  else {
+    $('#main-nav').fadeIn();
+  } else {
     $('#main-nav').fadeOut();
   }
  });
@@ -127,6 +126,7 @@ $(document).ready(function() {
     });
 });
 
+
 var Pics = { 
   index: 0,
   images: [],
@@ -159,4 +159,23 @@ var Pics = {
   }
 
 };
+
+/*
+ ____  _    _ _ _ _                
+/ ___|| | _(_) | | |__   __ _ _ __ 
+\___ \| |/ / | | | '_ \ / _` | '__|
+ ___) |   <| | | | |_) | (_| | |   
+|____/|_|\_\_|_|_|_.__/ \__,_|_|   
+   
+ https://codepen.io/tamak/pen/hzEer        
+*/
+
+jQuery(document).ready(function(){
+    jQuery('.skillbar').each(function(){
+        jQuery(this).find('.skillbar-bar').animate({
+            width:jQuery(this).attr('data-percent')
+        },1);
+    });
+});
+
 

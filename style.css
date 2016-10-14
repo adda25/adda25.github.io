@@ -64,6 +64,7 @@
 .pulse:hover {
     -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
 }
+
 @-webkit-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(47, 121, 185, 0.0);}}
 @-moz-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(47, 121, 185, 0.0);}}
 @-ms-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(47, 121, 185, 0.0);}}
@@ -72,7 +73,7 @@
 body {
     margin-left:auto;
     margin-right:auto;
-    left:0;
+    left: 0;
     right:0;
     font-family: 'Open Sans Condensed', sans-serif;
     overflow-x: hidden;
@@ -88,13 +89,13 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-position: center;
+    background-position: right;
     text-align: right;
     padding: 10vh 2vh 10vh;
     color: rgba(255, 255, 255, 1.0);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
-    background-image: url('images/homechiavi3.JPG'); 
-    background-attachment:fixed;
+    /*background-image: url('images/DSC_1912S.jpg'); */
+    background-image: url('images/DSC_1904.JPG'); 
 }
 
 .bg-about {
@@ -112,7 +113,7 @@ body {
     padding: 10vh 2vh 10vh;
     color: rgba(0, 0, 0, 1.0);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
-    background-image: url('images/DSC_0294W.jpg');
+    background-image: url('images/FP_03_MS.jpg');
     background-attachment:fixed;
 }
 
@@ -127,11 +128,11 @@ body {
     background-size: cover;
     -o-background-size: cover;
     background-position: left;
-    text-align: right;
+    text-align: center;
     padding: 10vh 2vh 10vh;
     color: rgba(255, 255, 255, 1.0);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
-    background-image: url('images/DSC_1688.jpg');
+    background-color: rgba(0,0,0,1.0);
 }
 
 .bg-mylife {
@@ -144,13 +145,13 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-position: right;
+    background-position: left;
     text-align: left;
     padding: 10vh 2vh 10vh;
     color: rgba(0, 0, 0, 1.0);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
-    background-color: rgb(255,255,255);
-    background-image: url('images/DSC_0595.JPG');
+    background-color: rgba(255,255,255,1.0);
+    
     background-attachment:fixed;
 }
 
@@ -170,6 +171,7 @@ body {
     color: rgba(255, 255, 255, 1.0);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
     background-color: rgb(0,0,0);
+    /*background-image: url('images/me.jpg');*/
 }
 
 /* #################################### */
@@ -267,15 +269,10 @@ form {
 
 .bounce-up .MTBox {
   opacity: 0;
-  -moz-transition: all 1000ms ease-out;
-  -webkit-transition: all 1000ms ease-out;
-  -o-transition: all 1000ms ease-out;
-  transition: all 1000ms ease-out;
-  -moz-transform: translate3d(0px, 200px, 0px);
-  -webkit-transform: translate3d(0px, 200px, 0px);
-  -o-transform: translate(0px, 200px);
-  -ms-transform: translate(0px, 200px);
-  transform: translate3d(0px, 200px, 0px);
+  -moz-transition: all 2000ms ease-out;
+  -webkit-transition: all 2000ms ease-out;
+  -o-transition: all 2000ms ease-out;
+  transition: all 2000ms ease-out;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -283,11 +280,6 @@ form {
 
 .bounce-up.in-view .MTBox {
   opacity: 1;
-  -moz-transform: translate3d(0px, 0px, 0px);
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  -o-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  transform: translate3d(0px, 0px, 0px);
 }
 
 .bounce-left .MTBox {
@@ -438,6 +430,88 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/*
+ ____  _    _ _ _ _                
+/ ___|| | _(_) | | |__   __ _ _ __ 
+\___ \| |/ / | | | '_ \ / _` | '__|
+ ___) |   <| | | | |_) | (_| | |   
+|____/|_|\_\_|_|_|_.__/ \__,_|_|   
+         
+ https://codepen.io/tamak/pen/hzEer        
+*/
+.skillbar {
+    position:relative;
+    display:block;
+    margin-bottom:35px;
+    width:100%;
+    background:#eee;
+    height:35px;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    -webkit-transition:0.4s linear;
+    -moz-transition:0.4s linear;
+    -ms-transition:0.4s linear;
+    -o-transition:0.4s linear;
+    transition:0.4s linear;
+    -webkit-transition-property:width, background-color;
+    -moz-transition-property:width, background-color;
+    -ms-transition-property:width, background-color;
+    -o-transition-property:width, background-color;
+    transition-property:width, background-color;
+}
+
+.skillbar-title {
+    position:absolute;
+    top:0;
+    left:0;
+    width:110px;
+    font-weight:bold;
+    font-size:13px;
+    color:#ffffff;
+    background:#6adcfa;
+    -webkit-border-top-left-radius:3px;
+    -webkit-border-bottom-left-radius:4px;
+    -moz-border-radius-topleft:3px;
+    -moz-border-radius-bottomleft:3px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+    display:block;
+    background:rgba(0, 0, 0, 0.1);
+    padding:0 20px;
+    height:35px;
+    line-height:35px;
+    -webkit-border-top-left-radius:3px;
+    -webkit-border-bottom-left-radius:3px;
+    -moz-border-radius-topleft:3px;
+    -moz-border-radius-bottomleft:3px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+    height:35px;
+    width:0px;
+    background:#6adcfa;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+    position:absolute;
+    right:10px;
+    top:0;
+    font-size:11px;
+    height:35px;
+    line-height:35px;
+    color:#ffffff;
+    color:rgba(0, 0, 0, 0.4);
 }
 
 
