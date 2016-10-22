@@ -91,74 +91,154 @@ $(window).scroll(function() {
 */
 
 $(document).ready(function() {
-    $("#thumbView0").click(function() {
-      Pics.setAtIndex(0);
+    $("#imageView1").click(function(e) {
+        var offset_t = $(this).offset().top - $(window).scrollTop();
+        var offset_l = $(this).offset().left - $(window).scrollLeft();
+        var left = Math.round( (e.clientX - offset_l) );
+        var right = -left + e.clientX;
+        var top = Math.round( (e.clientY - offset_t) );
+        if (left >= right) {
+            ImageGallery.userWantsNext();
+        } else {
+            ImageGallery.userWantsPrevius();
+        }
     });
 });
 
-$(document).ready(function() {
-    $("#thumbView1").click(function() {
-      Pics.setAtIndex(1);
-    });
-});
-
-$(document).ready(function() {
-    $("#thumbView2").click(function() {
-      Pics.setAtIndex(2);
-    });
-});
-
-$(document).ready(function() {
-    $("#thumbView3").click(function() {
-      Pics.setAtIndex(3);
-    });
-});
-
-$(document).ready(function() {
-    $("#thumbView4").click(function() {
-      Pics.setAtIndex(4);
-    });
-});
-
-$(document).ready(function() {
-    $("#thumbView5").click(function() {
-      Pics.setAtIndex(5);
-    });
+/**
+    If the user click on the thumbImages,
+    than the selected thumb is show
+    in the imageView.
+*/
+$(document).on('click', '.thumbView', function (event) {
+    ImageGallery.userWantsThumbId(event.target.id);
 });
 
 
-var Pics = { 
-  index: 0,
+var ImageGallery = {
   images: [],
-  mainView: "",
   thumbs: [],
-  _lastThIdx: 0, /* Private */
-  _lastOp: 1,    /* Private */
-
-  nextThumbnail: function(currentIndex) {
-    document.getElementById(this.thumbs[this._lastThIdx]).style.opacity = 0.5;
-    this._lastThIdx = currentIndex;
-    document.getElementById(this.thumbs[currentIndex]).style.opacity = 1.0;
-  },
-
-  setAtIndex: function(index) {
-    document.getElementById(this.mainView).style.backgroundImage = "url('" + this.images[index] + "')";
-    this.nextThumbnail(index);    
-    this.index = this.index + 1;
-  },
+  mainView: "",
+  imagesNum: 0,
+  thumbsNum: 0,
+  imIndex: 0,
+  thumbsStartIndexVal: 0,
 
   setup: function() {
-    this.setAtIndex(0);
-    for (var i = 0; i < 6; i++) {
-      if (i >= 6) {
-        break;
-      } else {
-        document.getElementById(this.thumbs[i]).style.backgroundImage = "url('" + this.images[i] + "')";
+    this.imagesNum = 0;
+    this.thumbsNum = 0;
+    this.imIndex   = 0;
+    this.thumbsStartIndexVal = 0;
+    var nt = [];
+    this.thumbs = document.querySelectorAll('[id^="thumbView"]');
+    this.thumbs.forEach(item => {
+        nt.push(item.id);
+        this.thumbsNum++;
+    })
+    this.thumbs = nt
+    this.images.forEach(item => { this.imagesNum++; })
+    this.loadThumbsFromImageIndexTo(0, this.thumbsEndIndex());
+    this.setImageAtIndex(0);
+  },
+
+  userWantsNext: function() {
+    if (this.imagesNum == this.imIndex) { return; }
+    this.imIndex++;
+    this.setImageAtIndex(this.imIndex);
+  },
+
+  userWantsPrevius: function() {
+    if (this.imIndex == 0) { return; }
+    this.imIndex--;
+    this.setImageAtIndex(this.imIndex);
+  },
+
+  userWantsThumbId: function(thumbId) {
+    var k = 0;
+    this.thumbs.forEach(item => {
+      if (item == thumbId) {
+        var startIndex = this.thumbsStartIndex();
+        this.setImageAtIndex(k + startIndex);
       }
+      k++;
+    })
+  },
+
+  setImageAtIndex: function(index) {
+    if (index > (this.imagesNum - 1)) { return; }
+    if (index < 0) { return; }
+    if (this.imagesNum == 0) { return; }
+    this.imIndex = index;
+    document.getElementById(this.mainView).style.backgroundImage = "url('" + this.images[index] + "')";
+    if (this.thumbsNum == 0) {
+      return;
+    } else if (this.thumbsNum == 1) {
+      this.loadThumbsFromImageIndexTo(this.imIndex, this.imIndex + 1);
+      this.setSelectedThumbWithThumbIndex(0);
+    } else if (this.thumbsNum == 2) {
+      this.loadThumbsFromImageIndexTo(this.imIndex, this.imIndex + 2);
+      this.setSelectedThumbWithThumbIndex(0);
+    } else { 
+      this.manageThumbsScroll();
+      var selectedThumbIndex = this.thumbIndexFromImIndex();
+      this.unselectAllThumbs();
+      this.setSelectedThumbWithThumbIndex(selectedThumbIndex);
     }
+  },
+
+  manageThumbsScroll: function() {
+    // Convert imIndex in thumbsIndex
+    var currentThumbIndex = this.thumbIndexFromImIndex();
+    var thumbsSize = this.thumbsNum;
+    if (currentThumbIndex == (thumbsSize - 1) ) {
+      if (this.imIndex == (this.imagesNum - 1) ) { 
+        return; 
+      }
+      // Go on
+      this.thumbsStartIndexVal += 1;
+      this.loadThumbsFromImageIndexTo(this.thumbsStartIndexVal, this.thumbsEndIndex());
+    } else if (currentThumbIndex == 0 && this.imIndex != 0) {
+      // Go back
+      this.thumbsStartIndexVal -= 1;
+      this.loadThumbsFromImageIndexTo(this.thumbsStartIndexVal, this.thumbsEndIndex());
+    }
+  },
+
+  loadThumbsFromImageIndexTo: function(min, max) {
+    var imgIdx = min;
+    if (imgIdx < 0 || this.imagesNum == 0) { return; }
+    for (var i = 0; i < this.thumbsNum; i++) {
+      if (imgIdx > (this.imagesNum - 1)) { return; }
+      if (imgIdx == max) { return; }
+      document.getElementById(this.thumbs[i]).style.backgroundImage = "url('" + this.images[imgIdx] + "')";
+      imgIdx++;
+    }
+  },
+
+  setSelectedThumbWithThumbIndex: function(thumbIndex) {
+    document.getElementById(this.thumbs[thumbIndex]).style.opacity = 1.0;
+  },
+
+  unselectAllThumbs: function() {
+    for (var i = 0; i < this.thumbsNum; i++) {
+      document.getElementById(this.thumbs[i]).style.opacity = 0.5;
+    }
+  },
+
+  thumbsStartIndex: function() {
+    return this.thumbsStartIndexVal;
+  },
+
+  thumbsEndIndex: function() {
+    return (this.thumbsStartIndexVal + this.thumbsNum);
+  },
+
+  thumbIndexFromImIndex: function() {
+    return this.imIndex - this.thumbsStartIndex(); 
   }
 
-};
+}; 
+
 
 /*
  ____  _    _ _ _ _                
