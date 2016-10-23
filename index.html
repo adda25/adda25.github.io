@@ -497,13 +497,10 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="actions.js"></script>
 
-        <!-- LOAD IMAGE GALLERY -->
+    <!-- LOAD IMAGE GALLERY -->
      <script type="text/javascript">
-        ImageGallery.mainView = 'imageView1';
-        ImageGallery.images = ['images/DSC_0527S.jpg', 'images/cimatosafade.JPG', 'images/moto.jpg','images/DSC_0498.JPG', 'images/kayak1.jpg', 'images/DSC_0660.JPG'];
-        ImageGallery.setup();
+        WebGallery.setup('imageView1', ['images/DSC_0527S.jpg', 'images/cimatosafade.JPG', 'images/moto.jpg','images/DSC_0498.JPG', 'images/kayak1.jpg', 'images/DSC_0660.JPG']);
   
-
         // jQuery for page scrolling feature - requires jQuery Easing plugin
         $(function() {
             $('a.page-scroll').bind('click', function(event) {

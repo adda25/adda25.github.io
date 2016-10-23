@@ -91,154 +91,186 @@ $(window).scroll(function() {
 */
 
 $(document).ready(function() {
-    $("#imageView1").click(function(e) {
-        var offset_t = $(this).offset().top - $(window).scrollTop();
-        var offset_l = $(this).offset().left - $(window).scrollLeft();
-        var left = Math.round( (e.clientX - offset_l) );
-        var right = -left + e.clientX;
-        var top = Math.round( (e.clientY - offset_t) );
-        if (left >= right) {
-            ImageGallery.userWantsNext();
-        } else {
-            ImageGallery.userWantsPrevius();
-        }
-    });
-});
+  /**
+    Control the imageView pic
+    when the user click on the imageView.
+    If the touch point is greater than the 
+    half width, than the next image is 
+    presented, and viceversa.
+  */
+  $('#' + WebGallery.data.get_main_view_id()).click(function (e) { 
+    var offset_l = $(this).offset().left - $(window).scrollLeft();
+    var left = Math.round( (e.clientX - offset_l) );
+    var div_width = $(this).width();
+    if (left > (div_width * 0.5)) {
+      WebGallery.next();
+    } else {
+      WebGallery.previus();
+    }
+  });
 
-/**
+  /**
     If the user click on the thumbImages,
     than the selected thumb is show
     in the imageView.
-*/
-$(document).on('click', '.thumbView', function (event) {
-    ImageGallery.userWantsThumbId(event.target.id);
+  */
+  $(document).on('click', '.thumbView', function (event) {
+    WebGallery.set_at_thumb_id(event.target.id);
+  });
 });
 
 
-var ImageGallery = {
-  images: [],
-  thumbs: [],
-  mainView: "",
-  imagesNum: 0,
-  thumbsNum: 0,
-  imIndex: 0,
-  thumbsStartIndexVal: 0,
+var WebGallery = {
 
-  setup: function() {
-    this.imagesNum = 0;
-    this.thumbsNum = 0;
-    this.imIndex   = 0;
-    this.thumbsStartIndexVal = 0;
-    var nt = [];
-    this.thumbs = document.querySelectorAll('[id^="thumbView"]');
-    this.thumbs.forEach(item => {
-        nt.push(item.id);
-        this.thumbsNum++;
-    })
-    this.thumbs = nt
-    this.images.forEach(item => { this.imagesNum++; })
-    this.loadThumbsFromImageIndexTo(0, this.thumbsEndIndex());
-    this.setImageAtIndex(0);
+  setup: function(main_view_id, images_to_load) {
+    this.data.setup(main_view_id, images_to_load);
   },
 
-  userWantsNext: function() {
-    if (this.imagesNum == this.imIndex) { return; }
-    this.imIndex++;
-    this.setImageAtIndex(this.imIndex);
+  next: function() {
+    this.data.next();
   },
 
-  userWantsPrevius: function() {
-    if (this.imIndex == 0) { return; }
-    this.imIndex--;
-    this.setImageAtIndex(this.imIndex);
+  previus: function() {
+    this.data.previus();
   },
 
-  userWantsThumbId: function(thumbId) {
-    var k = 0;
-    this.thumbs.forEach(item => {
-      if (item == thumbId) {
-        var startIndex = this.thumbsStartIndex();
-        this.setImageAtIndex(k + startIndex);
+  set_at_thumb_id: function(thumb_id) {
+    this.data.set_at_thumb_id(thumb_id);
+  },
+
+  data: (function() {
+    var images = [];
+    var thumbs = [];
+    var main_view = "";
+    var images_size = 0;
+    var thumbs_size = 0;
+    var image_index = 0;
+    var thumbs_start_index_val = 0; 
+
+    var set_image_at_index = function(index) {
+      if (index > (images_size - 1)) { return; }
+      if (index < 0) { return; }
+      if (images_size === 0) { return; }
+      image_index = index;
+      document.getElementById(main_view).style.backgroundImage = "url('" + images[index] + "')";
+      if (thumbs_size === 0) {
+        return;
+      } else if (thumbs_size === 1) {
+        load_thumbs_from_image_index_to(image_index, image_index + 1);
+        set_selected_thumb_with_thumb_index(0);
+      } else if (thumbs_size === 2) {
+        load_thumbs_from_image_index_to(image_index, image_index + 2);
+        set_selected_thumb_with_thumb_index(0);
+      } else { 
+        manage_thumbs_scroll();
+        var selected_thumb_index = thumb_index_from_image_index();
+        unselect_all_thumbs();
+        set_selected_thumb_with_thumb_index(selected_thumb_index);
       }
-      k++;
-    })
-  },
+    };
 
-  setImageAtIndex: function(index) {
-    if (index > (this.imagesNum - 1)) { return; }
-    if (index < 0) { return; }
-    if (this.imagesNum == 0) { return; }
-    this.imIndex = index;
-    document.getElementById(this.mainView).style.backgroundImage = "url('" + this.images[index] + "')";
-    if (this.thumbsNum == 0) {
-      return;
-    } else if (this.thumbsNum == 1) {
-      this.loadThumbsFromImageIndexTo(this.imIndex, this.imIndex + 1);
-      this.setSelectedThumbWithThumbIndex(0);
-    } else if (this.thumbsNum == 2) {
-      this.loadThumbsFromImageIndexTo(this.imIndex, this.imIndex + 2);
-      this.setSelectedThumbWithThumbIndex(0);
-    } else { 
-      this.manageThumbsScroll();
-      var selectedThumbIndex = this.thumbIndexFromImIndex();
-      this.unselectAllThumbs();
-      this.setSelectedThumbWithThumbIndex(selectedThumbIndex);
-    }
-  },
-
-  manageThumbsScroll: function() {
-    // Convert imIndex in thumbsIndex
-    var currentThumbIndex = this.thumbIndexFromImIndex();
-    var thumbsSize = this.thumbsNum;
-    if (currentThumbIndex == (thumbsSize - 1) ) {
-      if (this.imIndex == (this.imagesNum - 1) ) { 
-        return; 
+    var manage_thumbs_scroll = function() {
+      // Convert imIndex in thumbsIndex
+      var current_thumb_index = thumb_index_from_image_index();
+      if (current_thumb_index === (thumbs_size - 1) ) {
+        if (image_index === (images_size - 1)) { 
+          return; 
+        }
+        // Go on
+        thumbs_start_index_val += 1;
+        load_thumbs_from_image_index_to(thumbs_start_index_val, thumbs_end_index());
+      } else if (current_thumb_index === 0 && image_index !== 0) {
+        // Go back
+        thumbs_start_index_val -= 1;
+        load_thumbs_from_image_index_to(thumbs_start_index_val, thumbs_end_index());
       }
-      // Go on
-      this.thumbsStartIndexVal += 1;
-      this.loadThumbsFromImageIndexTo(this.thumbsStartIndexVal, this.thumbsEndIndex());
-    } else if (currentThumbIndex == 0 && this.imIndex != 0) {
-      // Go back
-      this.thumbsStartIndexVal -= 1;
-      this.loadThumbsFromImageIndexTo(this.thumbsStartIndexVal, this.thumbsEndIndex());
-    }
-  },
+    };
 
-  loadThumbsFromImageIndexTo: function(min, max) {
-    var imgIdx = min;
-    if (imgIdx < 0 || this.imagesNum == 0) { return; }
-    for (var i = 0; i < this.thumbsNum; i++) {
-      if (imgIdx > (this.imagesNum - 1)) { return; }
-      if (imgIdx == max) { return; }
-      document.getElementById(this.thumbs[i]).style.backgroundImage = "url('" + this.images[imgIdx] + "')";
-      imgIdx++;
-    }
-  },
+    var load_thumbs_from_image_index_to = function(min, max) {
+      var img_idx = min;
+      if (img_idx < 0 || images_size === 0) { return; }
+      for (var i = 0; i < thumbs_size; i++) {
+        if (img_idx > (images_size - 1)) { return; }
+        if (img_idx === max) { return; }
+        document.getElementById(thumbs[i]).style.backgroundImage = "url('" + images[img_idx] + "')";
+        img_idx++;
+      }
+    };
 
-  setSelectedThumbWithThumbIndex: function(thumbIndex) {
-    document.getElementById(this.thumbs[thumbIndex]).style.opacity = 1.0;
-  },
+    var set_selected_thumb_with_thumb_index = function(thumb_index) {
+      document.getElementById(thumbs[thumb_index]).style.opacity = 1.0;
+    };
 
-  unselectAllThumbs: function() {
-    for (var i = 0; i < this.thumbsNum; i++) {
-      document.getElementById(this.thumbs[i]).style.opacity = 0.5;
-    }
-  },
+    var unselect_all_thumbs = function() {
+      for (var i = 0; i < thumbs_size; i++) {
+        document.getElementById(thumbs[i]).style.opacity = 0.5;
+      }
+    };
 
-  thumbsStartIndex: function() {
-    return this.thumbsStartIndexVal;
-  },
+    var thumbs_start_index = function() {
+      return thumbs_start_index_val;
+    };
 
-  thumbsEndIndex: function() {
-    return (this.thumbsStartIndexVal + this.thumbsNum);
-  },
+    var thumbs_end_index = function() {
+      return (thumbs_start_index_val + thumbs_size);
+    };
 
-  thumbIndexFromImIndex: function() {
-    return this.imIndex - this.thumbsStartIndex(); 
-  }
+    var thumb_index_from_image_index = function() {
+      return image_index - thumbs_start_index(); 
+    };
 
-}; 
+    return { 
 
+      get_main_view_id: function() {
+        return main_view;
+      },
+
+      setup: function(main_view_id, images_to_load) {
+        main_view = main_view_id;
+        images = images_to_load;
+        images_size = 0;
+        thumbsNum = 0;
+        image_index = 0;
+        thumbs_start_index_val = 0;
+        var nt = [];
+        thumbs = document.querySelectorAll('[id^="thumbView"]');
+        thumbs.forEach(item => {
+            nt.push(item.id);
+            thumbs_size++;
+        })
+        thumbs = nt
+        images.forEach(item => { images_size++; })
+        load_thumbs_from_image_index_to(0, thumbs_end_index());
+        set_image_at_index(0);
+        return this;
+      },
+
+      next: function() {
+        if (images_size === image_index) { return; }
+        image_index++;
+        set_image_at_index(image_index);
+      },
+
+      previus: function() {
+        if (image_index === 0) { return; }
+        image_index--;
+        set_image_at_index(image_index);
+      },
+
+      set_at_thumb_id: function(thumb_id) {
+        var k = 0;
+        thumbs.forEach(item => {
+          if (item === thumb_id) {
+            var start_index = thumbs_start_index();
+            set_image_at_index(k + start_index);
+          }
+          k++;
+        })
+      }
+    }; // End return
+  }()) // End data
+
+}; // End ImageGallery
 
 /*
  ____  _    _ _ _ _                
