@@ -17,7 +17,10 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -63,6 +66,7 @@
                     <li>
                         <a class="page-scroll" href="#Home">HOME</a>
                     </li>
+        
                     <li>
                         <a href="#Resume" class="page-scroll">RESUME</a>
                     </li>
@@ -92,22 +96,22 @@
                             
     -->
 
-    <div class="bg-home" role="Home" id="Home">
-        <div class="centered-h-w">
-            <div class="caption">
-                <h2>AMEDEO SETTI</h2>
-                <h3>SOFTWARE DEVELOPER</h3>
-                <h3>MECHATRONICS ENGINEER </h3>
-            </div>
-            </br>
-            <div style="text-align:center">
-                <p style="color:rgba(240,240,240,0.5)">Picture by CG<p>
-                <a class="button pulse border page-scroll" href="#Resume">
-                    <img src="images/down-arrow.png" height="32"></img>
-                </a>
+    <section class="bg-home" id="Home">
+        <div class="container-fluid">
+            <div class="animation-element bounce-up">
+                    </br>
+                    <h1>Amedeo Setti</h1>
+                    <h3 style="color: rgba(0, 0, 0, 0.7);">Mechatronics Engineer <span style="color: #2f79b9"></br>&</span> Software Developer</h3>
+                    </br>
+                <div style="text-align:center">
+                    <p style="color:rgba(255,255,255,1.0)">Picture by CG<p>
+                    <a class="button pulse border page-scroll" href="#Resume">
+                        <img src="images/down-arrow.png" height="32"></img>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
 
     <!--
@@ -119,31 +123,33 @@
                                           
     -->
 
-    <div class="bg-resume" id="Resume">
-        <div class="bg-title">
-        <h3 style="padding: 10px 0px 10px 0px;">Long Story Short</h3>
-        </div>
+    <div class="bg-pc-resume" id="Resume">
+        <h2 style="color: rgba(255, 255, 255, 1.0); padding: 10px 0px 10px 0px;">Long Story Short</h2>
+    </div>
+
+
+    <section class="bg-resume">
         <div class="container-fluid">
             <div class="animation-element bounce-up fademm">
-                    <div class="col-lg-6 col-md-6 col-xs-12 thumb" style="padding-top: 6vh;">
+                    <div class="col-lg-6 col-md-6 col-xs-12 thumb">
                         <!-- EDU -->
                         <p class="text-faded">
-                            <h4 class="section-heading" style="color: rgba(255, 255, 255, 0.87);">Education</h4>
+                            <h3 class="section-heading" style="color: rgba(255, 255, 255, 1.0);">Education</h3>
                             <p>
-                            MSc degree in <i>Mechatronics engineering</i> @ University of Trento 2012-2014<br/>
-                            BSc degree in <i>Industrial engineering</i> @ University of Trento 2009-2012
+                            MSc degree in <i>Mechatronics engineering</i> - University of Trento 2012-2014<br/>
+                            BSc degree in <i>Industrial engineering</i> - University of Trento 2009-2012
                             </p>
                         </p>
                         <!-- JOBS -->
                         <p class="text-faded">
-                            <h4 class="section-heading" style="color: rgba(255, 255, 255, 0.87);">Employement</h4>
+                            <h3 class="section-heading" style="color: rgba(255, 255, 255, 1.0);">Employement</h3>
                             <p>
                             Lead <i>software developer</i> of the <a href="http://www.artool.biz">ARTool</a> project,   2014-Current.
                             </p>
                         </p>
                         <!-- TECHS -->
                         <p class="text-faded">
-                            <h4 class="section-heading" style="color: rgba(255, 255, 255, 0.87);">Techs</h4>
+                            <h3 class="section-heading" style="color: rgba(255, 255, 255, 1.0);">Techs</h3>
                             <p>
                             <i>Swift, Objective-C, Apple's Frameworks, C++, C, Ruby, OpenCV</i></br>
                             <i>HTML, CSS, JS, Python, Matlab, Maple, ANSYS, Arduino</i></br>
@@ -153,7 +159,7 @@
                         </p>
                         <!-- WHY ME? -->
                         <p class="text-faded">
-                            <h4 class="section-heading" style="color: rgba(255, 255, 255, 0.87);">Why me?</h4>
+                            <h3 class="section-heading" style="color: rgba(255, 255, 255, 1.0);">Why me?</h3>
                             <p>
                             Because I can <i>solve</i> a lot of different problems without stress out the boss.</br>
                             Because I'm italian, so I can <i> cook </i> some good italian's stuff for you.</br>
@@ -162,8 +168,8 @@
                         </p>
                     </div>
 
-                    <div class="col-lg-6 col-md-6 col-xs-12 thumb" style="padding-top: 6vh; padding-bottom: 6vh">
-                    <h4 class="section-heading" style="color: rgba(255, 255, 255, 1.0);">Skills</h4>
+                    <div class="col-lg-6 col-md-6 col-xs-12 thumb">
+                    <h3 class="section-heading" style="color: rgba(255, 255, 255, 1.0);">Skills</h3>
                         <div class="skillbar clearfix " data-percent="100%">
                             <div class="skillbar-title" style="background: #212121;"><span>C++</span></div>
                             <div class="skillbar-bar" style="background: linear-gradient(to bottom right,#E91E63, #AD1457);"></div>
@@ -209,17 +215,19 @@
                 </div>
                 -->
         </div>
-    </div>
+    </section>
 
-    <div class="bg-projects" id="Projects">
-        <div class="bg-title" style="background-color: #1c1819; color: rgb(255,255,255)">
-            <h3>I'm working on</h3>
+
+    <section class="bg-projects" id="Projects">
+  
+        <div class="container-fluid">
+              <div class="bg-title">
+            <h2>I'm working on</h2>
         </div>
-            <div class="container-fluid">
-        <div class="animation-element bounce-up fademm">
+            <div class="animation-element bounce-up fademm">
                 <div class="col-lg-4 col-md-4 col-xs-12">
-                    <div class="working-info">
-                        <h4> Artool </h4>
+                    <div class="working-info" style="background: linear-gradient(to bottom right,#8BC34A, #558B2F);">
+                        <h3> Artool </h3>
                         <p>
                             It's my main project.
                             It's a complex iOS app build up
@@ -229,8 +237,8 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-xs-12">
-                    <div class="working-info" >
-                        <h4> Asmd </h4>
+                    <div class="working-info" style="background: linear-gradient(to bottom right,#FFC107, #FF8F00);">
+                        <h3> Asmd </h3>
                         <p>
                             An C++ template library for marker
                             detection. It can detects both
@@ -244,8 +252,8 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-xs-12">
-                    <div class="working-info">
-                        <h4> Web </h4>
+                    <div class="working-info" style="background: linear-gradient(to bottom right,#F44336, #C62828);">
+                        <h3> Web </h3>
                         <p>
                         Usually I develop simple web pages during night.
                         I developed this site and another pair of them for
@@ -256,10 +264,17 @@
                 </div>
 
             </div>
+            
         </div>
-        
-        
-    </div>
+        <!--
+         <div style="text-align:center">
+            <a class="button border page-scroll" href="#MyLife">
+            <img src="images/down-arrow.png" height="32"></img>
+            </a>
+        </div>
+        -->
+    </section>
+
 
     <!--
       __  __       _     _  __      
@@ -270,59 +285,59 @@
              |___/              
     -->
 
-    <div class="bg-mylife" id="MyLife">
-        <div class="bg-title" style="background-color: rgb(255,255,255); color: rgba(0,0,0, 0.87)">
-            <h3>About</h3>             
-            <p style="padding: 10px 40px 10px 40px; line-height: 22px">
-            My first PC was an old Windows98 with 64MB of RAM.
-            My first motorbike was the Aprilia RS50, in the 2005.
-            In the 2011 I designed and built my wood-fiberglass kayak.
-            I started to climb and love moutains four years ago.
-            I also like photography.
-            I like to listen Metal and Electronic music.
-            I have always adjusted my games, like motorbikes and PCs.
-            I'm a dreamer who don't like people who can not make fun of themselves.
-            </p>
+    <section class="bg-mylife" id="MyLife">
+        <div class="container-fluid">
+            <div class="animation-element bounce-up">
+                <div class="MTBox border">
+                     <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-12  portfolio-item">
+                            <h2 style="color: rgba(255, 255, 255, 0.87);">About</h2>
+                            <p>
+                            Here there are some pictures on my daily life.</br>
+                            As you can see, I like mountains, motorbikes</br>
+                            and computers..</br>
+                            </p>
+                            </br>
+                            <h3 style="color: rgba(255, 255, 255, 0.87);">My life in short</h3>
+                            <p>
+                            My first PC was an old Windows98 with 64MB of RAM.</br>
+                            My first motorbike was the Aprilia RS50, in the 2005.</br></br>
+                            In the 2011 I designed and built my wood-fiberglass kayak.</br>
+                            I started to climb and love moutains four years ago.</br>
+                            I also like photography.</br>
+                            I like to listen Metal and Electronic music. </br></br>
+                            I have always adjusted my games, like motorbikes and PCs.</br>
+                            I'm a dreamer who don't like people who can not make fun of themselves.
+                            </p>
+                        </div>
+                        <div class="col-md-8 portfolio-item" >
+                            <div class="col-lg-12 col-md-12 col-xs-12" >
+                                <div class="web-gallery-view" style="padding: 5px 1px 1px 1px;"></div>
+                            </div>
+                            <style>
+                              .web-gallery-thumbs div {
+                                width: 20%;
+                                float: center;
+                                display: inline-block;
+                              }
+                            </style>
+                            <div class="col-lg-12 col-md-12 col-xs-12 web-gallery-thumbs" style="padding: 5px 1px 5px 1px;" data-web-gallery-thumbs="4"> </div>
+                            </div>
+                             
+                        </div>
+                    </div>
+                </div>
 
-            <p style="padding: 10px 40px 10px 40px; line-height: 22px">
-            Here there are some pictures on my daily life.
-            As you can see, I like mountains, motorbikes
-            and computers..
-            </p>
-
-            <div class="col-lg-4 col-md-4 col-xs-12 thumb web-gallery-thumbs">
-                <div style="background-image: url('images/DSC_0527S.jpg')"></div>
+                <!--
+                <div style="text-align:center">
+                    <a  class="button border page-scroll" href="#Contact">
+                        <img src="images/down-arrow.png" height="32"></img>
+                    </a>
+                </div>
+                -->
             </div>
-
-            <div class="col-lg-4 col-md-4 col-xs-12 thumb web-gallery-thumbs">
-                <div style="background-image: url('images/cimatosafade.JPG')"></div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-xs-12 thumb web-gallery-thumbs">
-                <div style="background-image: url('images/moto.jpg')"></div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-xs-12 thumb web-gallery-thumbs">
-                <div style="background-image: url('images/DSC_0498.JPG')"></div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-xs-12 thumb web-gallery-thumbs">
-                <div style="background-image: url('images/kayak1.jpg')"></div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-xs-12 thumb web-gallery-thumbs">
-                <div style="background-image: url('images/DSC_0660.JPG')"></div>
-            </div>
-
-            <!--<div class="col-lg-12 col-md-12 col-xs-12 web-gallery-thumbs" style="padding: 0px 0px 0px 0px;" data-web-gallery-thumbs="4"> </div>-->
-            Click on it! [But not today! :D]
-
-
-   
         </div>
-            
-    
-    </div>
+    </section>
 
     <!--
       ____            _             _   
@@ -341,7 +356,7 @@
                         <h2 style="color: rgba(0, 0, 0, 0.87);" >Where to find me</h2>
                     </div>
     
-                    <div class="col-lg-4">
+                    <div class="col-lg-2">
                         <a class="button border" href="https://github.com/adda25">
                             <img src="images/github-icon.png" height="32">
                                 <font color="2f79b9">GitHub</font>
@@ -349,7 +364,7 @@
                         </a>
                     </div>
     
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <a class="button border" href="http://stackoverflow.com/users/5148377/adda-25?tab=profile">
                             <img src="images/so-icon.png" height="32">
                                 <font color="2f79b9">stackoverflow</font>
@@ -357,16 +372,16 @@
                         </a>
                     </div>
     
-                    <div class="col-lg-4">
+                    <div class="col-lg-2">
                         <a class="button border" href="https://bitbucket.org/adda25/profile/repositories?visibility=all">
                             <img src="images/bitbucket-icon.png" height="32">
                                 <font color="2f79b9">Bitbucket</font>
                             </img>
                         </a>
                     </div>
-                    
-                    <div class="col-lg-12">
-                        </br><h4 class="section-heading" style="color: rgba(0, 0, 0, 0.7);">Send me a message!</h4>
+    
+                    <div class="col-lg-8">
+                        </br><h3 class="section-heading" style="color: rgba(0, 0, 0, 0.7);">Send me a message!</h3>
                         <p>I would be happy if you will contact me via this form!</p>
                     </div>
                     <form class="form-horizontal" role="form" method="post">
@@ -408,8 +423,7 @@
          <div class="row">
              <div class="col-lg-12 text-center" style="background-color: rgba(0,0,0,1.0); color: rgba(255,255,255,1.0)">
                  Developed by Amedeo Setti. Source code is on my <a href="https://github.com/adda25/adda25.github.io">GitHub</a></br>
-                 Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></br>
-                 Thanks to the guys of <a href="https://www.pexels.com/" title="Pexels" target="_blank">Pexels </a>  for some of the pics</a>
+                 Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
              </div>
          </div>
          </div>
@@ -435,7 +449,7 @@
 
     <!-- LOAD IMAGE GALLERY -->
      <script type="text/javascript">
-        /*WebGallery.setup(['images/DSC_0527S.jpg', 'images/cimatosafade.JPG', 'images/moto.jpg','images/DSC_0498.JPG', 'images/kayak1.jpg', 'images/DSC_0660.JPG']);*/
+        WebGallery.setup(['images/DSC_0527S.jpg', 'images/cimatosafade.JPG', 'images/moto.jpg','images/DSC_0498.JPG', 'images/kayak1.jpg', 'images/DSC_0660.JPG']);
   
         // jQuery for page scrolling feature - requires jQuery Easing plugin
         $(function() {

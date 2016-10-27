@@ -5,14 +5,6 @@
     outline: solid #f00 1px !important;
 } */
 
-.border {
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-    border-style: solid;
-    border-radius:10px;
-    border-color: rgba(255, 255, 255, 0.00);
-    border-width: 0px;
-}
 
 .MTBox {
     min-width:80%;
@@ -74,13 +66,46 @@ body {
     margin-right:auto;
     left: 0;
     right:0;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Lato', sans-serif;
     overflow-x: hidden;
+}
+
+.centered-h-w {
+  min-width: 100%;
+  padding: 5px 0px 5px 0px;
+  color: rgba(255,255,255,1.0);
+  position: absolute;
+  left: 50%;
+  top: 82%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+.caption {
+  text-align: center;
+  color: rgb(255,255,255);
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+.bg-title {
+    width: 100vw;
+    min-height: 10vh;
+    padding: 40px 0px 40px 0px;
+    margin: 0px 0px 0px 0px;
+    color: rgba(0,0,0,0.70);
+    background-color: rgba(255,255,255,1.0);
 }
 
 .bg-home {
     font-size: auto;
-    font-weight: bold;
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -88,39 +113,20 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-position: right;
+    background-position: center;
     background-repeat: no-repeat;
     text-align: left;
     padding: 10vh 2vh 10vh;
-    color: rgba(0, 0, 0, 1.0);
-    text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
-    background-image: url('images/FP_03_MS.jpg');
-}
-
-
-
-.bg-about {
-    font-size: auto;
-    font-weight: bold;
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    background-position: right;
-    text-align: left;
-    padding: 10vh 2vh 10vh;
-    color: rgba(0, 0, 0, 1.0);
-    text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
-    background-image: url('images/FP_03_MS.jpg');
-    background-attachment:fixed;
+    color: rgba(0, 0, 0, 0.87);
+    background-image: url('images/me1.jpg');
+    background-attachment: fixed;
+    background-color: rgb(150,150,150);
+    background-blend-mode: soft-light;
+    
 }
 
 .bg-resume {
     font-size: auto;
-    font-weight: bold;
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -128,17 +134,18 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-position: left;
+    background-position: top;
     text-align: center;
-    padding: 10vh 2vh 10vh;
-    color: rgba(255, 255, 255, 1.0);
-    text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
-    background-color: rgba(0,0,0,1.0);
+    padding: 0px 0px 0px 0px;
+    color: rgba(255, 255, 255, 0.7);
+    background-image: url('images/test-resume.jpg');
+    background-attachment: fixed;
+    background-color: rgb(150,150,150);
+    background-blend-mode: soft-light;
 }
 
 .bg-projects {
     font-size: auto;
-    font-weight: bold;
     position: relative;
     width: 100%;
     min-height: 100%;
@@ -148,28 +155,27 @@ body {
     -o-background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 10vh 2vh 10vh;
-    color: rgba(0, 0, 0, 1.0);
-    text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
-    background-color: rgba(255,255,255,1.0);
+    padding: 0px 0px 0px 0px;
+    color: rgba(255, 255, 255, 1.0);
+    background-image: url('images/working-on7.jpg');
+    background-attachment: fixed;
+    background-color: rgb(150,150,150);
+    background-blend-mode: soft-light;
 }
 
 .bg-mylife {
     font-size: auto;
-    font-weight: bold;
     position: relative;
     width: 100%;
     min-height: 100vh;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    background-position: left;
-    text-align: center;
-    padding: 10vh 2vh 10vh;
-    color: rgba(255, 255, 255, 1.0);
+    padding: 0px 0px 0px 0px;
+    color: rgba(255, 255, 255, 0.7);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
-    background: rgba(0, 0, 0, 1.0);
+    background-color: rgba(0,0,0,1.0);
+    text-align: center;
+    text-justify: inter-word;
+    -moz-text-align-last: center;
+    text-align-last: center;
 }
 
 .bg-contact {
@@ -182,12 +188,14 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-position: right;
-    text-align: left;
+    background-position: center;
+    text-align: center;
     padding: 10vh 1vw 10vh 1vw;
-    color: rgba(0, 0, 0, 1.0);
+    color: rgba(0, 0, 0, 0.7);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
-    background-image: url('images/me.jpg');
+    background-image: url('images/contact1.jpg');
+    background-color: rgb(100,100,100);
+    background-blend-mode: screen;
 }
 
 .thumbnail {
@@ -212,11 +220,11 @@ body {
   position: relative;
   width: 80%;
   height: 100%;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  color: rgba(255,255,255,1.0);
-  background: linear-gradient(to bottom right,#03A9F4, #0277BD);
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  color: rgba(255,255,255,0.87);
+  background: rgba(255,255,255,0.0);
   position: relative;
 }
 
@@ -227,8 +235,8 @@ body {
   -o-background-size: cover;
   background-position: center;
   background-image: url(images/artool.jpg);
-  background-color: #8BC34A;
-  background-blend-mode: multiply;
+  background-color: rgba(127,127,127,1.0);
+  background-blend-mode: overlay;
   width: 100%;
   height: 20vh;
   -moz-border-radius: 5px;
@@ -243,8 +251,8 @@ body {
   -o-background-size: cover;
   background-position: center;
   background-image: url(images/marker.jpg);
-  background-color: #FFC107;
-  background-blend-mode: multiply;
+  background-color: rgba(127,127,127,1.0);
+  background-blend-mode: overlay;
   width: 100%;
   height: 20vh;
   -moz-border-radius: 5px;
@@ -258,9 +266,9 @@ body {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url(images/mgw.png);
-  background-color: #C62828;
-  background-blend-mode: multiply;
+  background-image: url(images/websitemg.png);
+  background-color: rgba(127,127,127,1.0);
+  background-blend-mode: overlay;
   width: 100%;
   height: 20vh;
   -moz-border-radius: 5px;
@@ -272,26 +280,37 @@ body {
 /* MOBILE FONT SIZES */
 /* #################################### */
 h1 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 60px;
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 10px;
 }
 
 h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 35px;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 10px;
 }
 
 h3 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 16px;
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 10px;
 }
 
-p {
-    font-size: 12px;
+h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 10px;
 }
+
 /* #################################### */
 /* #################################### */
 
@@ -316,8 +335,9 @@ p {
 }
 
 form { 
+    display: inline-block;
+    text-align: center;
     margin-top: 50px;
-    margin-left: 25px;
     width:50%;
 }
 
@@ -342,22 +362,36 @@ form {
 /* For desktop screens, increase the fonts sizes */
 @media only screen and (min-width: 500px) {
     h1 {
-        font-family: 'Orbitron', sans-serif;
+        font-family: 'Lato', sans-serif;
         font-size: 80px;
-        font-weight: bold;
+        text-transform: uppercase;
+
+        letter-spacing: 10px;
     }
 
     h2 {
-        font-family: 'Orbitron', sans-serif;
-        font-size: 60px;
-        font-weight: bold;
+        font-family: 'Lato', sans-serif;
+        font-size: 40px;
+        text-transform: uppercase;
+
+        letter-spacing: 10px;
     }
     
     h3 {
-        font-family: 'Orbitron', sans-serif;
+        font-family: 'Lato', sans-serif;
         font-size: 25px;
-        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 10px;
     }
+
+    h4 {
+        font-family: 'Lato', sans-serif;
+        font-size: 20px;
+        text-transform: uppercase;
+
+        letter-spacing: 10px;
+    }
+
 
     p {
         font-size: 16px;
@@ -483,7 +517,8 @@ form {
   -o-background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgba(0,0,0,1.0);
+  background-attachment: fixed;
+  background-color: #90CAF9;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
@@ -494,6 +529,8 @@ form {
   margin-bottom: 0px;
   padding-left: 0px;
   padding-right: 0px;
+  background-color: rgb(100,100,100);
+  background-blend-mode: hard-light;
 }
 
 .web-gallery-thumbs {
@@ -507,14 +544,14 @@ form {
   right:0;
   overflow-x: hidden;
   width: 100%;
-  min-height: 14vh;
+  min-height: 24vh;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
   background-color: rgba(100,100,100,0.1);
-  opacity: 0.25;
+  opacity: 1.0;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 1px;
@@ -539,7 +576,7 @@ form {
   -o-background-size: cover;
   background-position: center;
   background-color: rgba(100,100,100,0.1);
-  opacity: 0.25;
+  opacity: 0.5;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 1px;
@@ -550,6 +587,9 @@ form {
   margin-bottom: 5px;
   text-align: center;
 }
+
+.web-gallery-thumbs-div:hover { opacity: 0.8; }
+
 /*
  ____  _    _ _ _ _                
 / ___|| | _(_) | | |__   __ _ _ __ 

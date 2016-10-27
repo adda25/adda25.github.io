@@ -228,7 +228,7 @@ var WebGallery = {
 
     var unselect_all_thumbs = function() {
       for (var i = 0; i < thumbs_size; i++) {
-        document.getElementById(thumbs[i]).style.opacity = 0.25;
+        document.getElementById(thumbs[i]).style.opacity = 0.5;
       }
     };
 
@@ -291,7 +291,7 @@ var WebGallery = {
         thumbs = nt
         images.forEach(item => { images_size++; })
         load_thumbs_from_image_index_to(0, thumbs_end_index());
-        set_image_at_index(0);
+        //set_image_at_index(0);
         return this;
       },
 
