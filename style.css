@@ -76,9 +76,19 @@ body {
   color: rgba(255,255,255,1.0);
   position: absolute;
   left: 50%;
-  top: 82%;
+  top: 80%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+
+.centered-h {
+  min-width: 100%;
+  padding: 5px 0px 5px 0px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
 }
 
 
@@ -148,12 +158,12 @@ body {
     font-size: auto;
     position: relative;
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-position: center;
+    background-position: top;
     text-align: center;
     padding: 0px 0px 0px 0px;
     color: rgba(255, 255, 255, 1.0);
@@ -171,7 +181,7 @@ body {
     padding: 0px 0px 0px 0px;
     color: rgba(255, 255, 255, 0.7);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
-    background-color: rgba(0,0,0,1.0);
+    background-color: rgba(255,255,255,1.0);
     text-align: center;
     text-justify: inter-word;
     -moz-text-align-last: center;
@@ -191,7 +201,7 @@ body {
     background-position: center;
     text-align: center;
     padding: 10vh 1vw 10vh 1vw;
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.87);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
     background-image: url('images/contact1.jpg');
     background-color: rgb(100,100,100);
