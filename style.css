@@ -57,7 +57,7 @@ body {
     margin-right:auto;
     left: 0;
     right:0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Jura', sans-serif;
     overflow-x: hidden;
 }
 
@@ -67,7 +67,7 @@ body {
   color: rgba(255,255,255,1.0);
   position: absolute;
   left: 50%;
-  top: 80%;
+  top: 75%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -120,30 +120,31 @@ body {
     text-align: left;
     padding: 10vh 2vh 10vh;
     color: rgba(0, 0, 0, 0.87);
-    background-image: url('images/me1.jpg');
-    background-attachment: fixed;
+    background-image: url('images/pic-homepage.jpg');
     background-color: rgb(150,150,150);   
+    background-position: center;
+    background-blend-mode: hard-light;
+    background-attachment: fixed;
 }
 
 .bg-resume {
     background-position: top;
     text-align: center;
-    padding: 0px 0px 0px 0px;
+    padding: 60px 0px 0px 0px;
     color: rgba(255, 255, 255, 0.7);
-    background-image: url('images/test-resume.jpg');
+    background-image: url('images/lss1.jpg');
     background-color: rgb(100,100,100);
-    background-blend-mode: soft-light;
+    background-attachment: fixed;
+    background-blend-mode: hard-light;
 }
 
 .bg-projects {
     background-position: top;
     text-align: center;
-    padding: 0px 0px 0px 0px;
-    color: rgba(255, 255, 255, 1.0);
-    background-image: url('images/working-on7.jpg');
-    background-attachment: fixed;
-    background-color: rgb(100,100,100);
-    background-blend-mode: soft-light;
+    padding: 60px 0px 0px 0px;
+    color: rgba(0, 0, 0, 0.87);
+    background-position: left;
+    background-color: rgb(255,255,255);
 }
 
 .bg-mylife {
@@ -151,21 +152,37 @@ body {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    padding: 0px 0px 0px 0px;
-    color: rgba(255, 255, 255, 0.7);
+    padding: 60px 0px 0px 0px;
+    color: rgba(0, 0, 0, 0.87);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.0);
     background-color: rgba(255,255,255,1.0);
-    text-align: left;
+    background-position: right;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.pic-mylife {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('images/me3.jpg'); 
+    background-position: top; 
+    height: 100vh; 
 }
 
 .bg-contact {
     background-position: bottom;
     text-align: center;
-    padding: 10vh 1vw 10vh 1vw;
-    color: rgba(255, 255, 255, 0.87);
-    background-image: url('images/wheretofind.jpg');
+    padding: 60px 0px 0px 0px;
+    color: rgba(255, 255, 255, 1.0);
+    background-image: url('images/pic-contact-1.jpg');
     background-attachment: fixed;
     background-color: rgb(100,100,100);
+    background-blend-mode: hard-light;
+    background-position: center; 
 }
 
 .thumbnail {
@@ -193,7 +210,7 @@ body {
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   border-radius: 0px;
-  color: rgba(255,255,255,1.0);
+  color: rgba(0,0,0,0.87);
   background: rgba(255,255,255,0.0);
   position: relative;
 }
@@ -207,9 +224,9 @@ body {
   background-color: rgba(127,127,127,1.0);
   width: 100%;
   height: 20vh;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
 }
 
 .work-pic-artool {
@@ -223,6 +240,18 @@ body {
 .work-pic-web {
   background-image: url(images/websitemg.png);
 }
+
+#back-button img {
+  width: 45px;
+  padding: 5px;
+  border: 0;
+  box-shadow: 0;
+  display: inline;
+  
+  
+  
+}
+
 
 /* #################################### */
 /* MOBILE FONT SIZES                    */
@@ -378,20 +407,60 @@ form {
 
 */
 
-.web-gallery {
 
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.web-gallery {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
 .web-gallery-view {
+  display: block;
   overflow-x: hidden;
   min-width: 100%;
   max-width: 100%;
   min-height: 75vh;
   max-height: 90vh;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  -o-background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -406,8 +475,11 @@ form {
   margin-bottom: 0px;
   padding-left: 0px;
   padding-right: 0px;
-  background-color: rgb(100,100,100);
-  background-blend-mode: hard-light;
+  background-color: rgba(0,0,0,0.0); 
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.2s;
+  animation-name: zoom;
+  animation-duration: 0.2s;
 }
 
 .web-gallery-thumbs {
@@ -427,7 +499,7 @@ form {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-color: rgba(100,100,100,0.1);
+  background-color: rgba(0,0,0,0.2); 
   opacity: 1.0;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -446,26 +518,22 @@ form {
   right:0;
   overflow-x: hidden;
   width: 100%;
-  min-height: 14vh;
+  min-height: 40vh;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-color: rgba(100,100,100,0.1);
+  background-color: rgba(0,0,0,0.2); 
   opacity: 0.5;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 1px;
   transition: all 0.2s ease-in-out;
-  margin-left: 2px;
-  margin-right: 0px;
-  margin-top: 0px;
-  margin-bottom: 5px;
   text-align: center;
 }
 
-.web-gallery-thumbs-div:hover { opacity: 0.8; }
+
 
 /*
  ____  _    _ _ _ _                

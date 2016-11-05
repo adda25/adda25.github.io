@@ -74,6 +74,7 @@ $(window).scroll(function() {
  });
 
 
+                     
 /*
  ___                          __     ___               
 |_ _|_ __ ___   __ _  __ _  __\ \   / (_) _____      __
@@ -170,7 +171,10 @@ var WebGallery = {
       if (index < 0) { return; }
       if (images_size === 0) { return; }
       image_index = index;
+      document.getElementsByClassName("web-gallery")[0].style.display = "block";
       document.getElementsByClassName("web-gallery-view")[0].style.backgroundImage = "url('" + images[index] + "')";
+
+
       if (thumbs_size === 0) {
         return;
       } else if (thumbs_size === 1) {
@@ -314,7 +318,6 @@ var WebGallery = {
   }()) // End data
 
 }; // End ImageGallery
-
 
 /*
  ____  _    _ _ _ _                
